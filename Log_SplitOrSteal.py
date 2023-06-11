@@ -19,10 +19,11 @@ class Game:
     def __init__ (self, total_rounds):
         self.rounds_played = 0
         self.total_rounds = total_rounds 
-        self.current_amount = 0 
+        self.current_amount = 0
+        
         
     def isOver(self):
-        return self.rounds_played >= self.total_rounds;    
+        return self.rounds_played >= self.total_rounds
         
     def prepare_round(self):
         # Generate random values for total amount and rounds played
@@ -152,26 +153,27 @@ def play_round(game, agent1, agent2, remaining):
   agent2.render(550, 50)
   game.render()
 
+ntrains = 500
+for i in range(ntrains):
+  # Create agents
+  agent1 = Player(simple_opponents.Splitter())
+  agent2 = Player(simple_opponents.Stealer())
+  agent3 = Player(simple_opponents.Randy())
+  agent4 = Player(simple_opponents.Karmine())
+  agents = [agent1, agent2, agent3, agent4, Player(your_agent.ReinforcementLearningAgent())]
 
-# Create agents
-agent1 = Player(simple_opponents.Splitter())
-agent2 = Player(simple_opponents.Stealer())
-agent3 = Player(simple_opponents.Randy())
-agent4 = Player(simple_opponents.Karmine())
-agents = [agent1, agent2, agent3, agent4, Player(your_agent.ReinforcementLearningAgent())]
+  nrematches = 2 # Could very
+  nfullrounds = 1 # How many full cycles
+  total_rounds = len(agents)*(len(agents) - 1) * nfullrounds * nrematches
 
-nrematches = 2 # Could very
-nfullrounds = 1 # How many full cycles
-total_rounds = len(agents)*(len(agents) - 1) * nfullrounds * nrematches
-game = Game(total_rounds)
 
-# Play rounds
-while not game.isOver():
-  random.shuffle(agents)
-  for player1, player2 in permutations(agents, 2):
-    log.write("==========\n")
-    for remaining in reversed(range(0, nrematches)):
-      play_round(game, player1, player2, remaining)
+  game = Game(total_rounds)
+  while not game.isOver():
+    random.shuffle(agents)
+    for player1, player2 in permutations(agents, 2):
+      log.write("==========\n")
+      for remaining in reversed(range(0, nrematches)):
+        play_round(game, player1, player2, remaining)
 
 
 max_score = -1

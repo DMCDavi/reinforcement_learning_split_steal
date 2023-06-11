@@ -48,7 +48,7 @@ class Game:
         self.current_amount = 0 
         
     def isOver(self):
-        return self.rounds_played >= self.total_rounds;    
+        return self.rounds_played >= self.total_rounds 
         
     def prepare_round(self):
         # Generate random values for total amount and rounds played
@@ -79,7 +79,7 @@ class Game:
             right_reward = 0   
         elif right_decision == 'steal':
             right_reward = self.current_amount 
-            left_reward = 0;
+            left_reward = 0
             
         print(f"Agent {left_agent.name} won {left_reward:.2f}"
               f" vs Agent {right_agent.name} won {right_reward:.2f}")            
@@ -201,7 +201,7 @@ def play_round(game, agent1, agent2, remaining):
   screen.fill(BLACK)
   screen.blit(background_image, (0, 0))
   game.prepare_round()
-  game.preround_render();
+  game.preround_render()
   agent1.preround_render(50, 50)
   agent2.preround_render(550, 50)        
 
@@ -225,7 +225,7 @@ def play_round(game, agent1, agent2, remaining):
   screen.blit(background_image, (0, 0))    
   agent1.render(50, 50)
   agent2.render(550, 50)
-  game.render();
+  game.render()
 
  # Update the screen
   pygame.display.flip()
