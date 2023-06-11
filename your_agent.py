@@ -10,15 +10,15 @@ class ReinforcementLearningAgent:
     # Flag indicando se essa seria a ultima rodada
     self.last_round = False
 
-    #Reads the policy
-    self.police = open("police.txt","r")
+    #Reads the police
     self.actions = {}
     self.read_police()
 
     
   
   def read_police(self):
-    for line in self.police:
+    police = open("police.txt","r")
+    for line in police:
       if len(line.split()) > 1:
         if random.random() < 0.5:
           self.actions[line.split()[0]]=line.split()[1]
@@ -26,6 +26,7 @@ class ReinforcementLearningAgent:
           self.actions[line.split()[0]]=random.choice(['0','1'])
       else:
         self.old_score = float(line)
+    police.close()
 
   def reset_police(self):
     police = open("police.txt","w")
@@ -49,7 +50,6 @@ class ReinforcementLearningAgent:
   # apenas como demonstracao. Agente de aprendizagem
   # por reforco seria o objetivo
   def decision(self, amount, rounds_left, your_karma, his_karma):
-    #print(f"{amount=}, {rounds_left=}, {your_karma=}, {his_karma=}")
 
     self.last_round = True if rounds_left == 0 else False
     
@@ -72,9 +72,7 @@ class ReinforcementLearningAgent:
       self.replace_police()
       print(self.score)
     if self.last_round:
-      #print("Forgetting last opponent action") # Vamos mudar de agente
       self.last_opponent_action = None
     else:   
       self.last_opponent_action = his_action
-      #print(f"For {self.get_name()=} {self.last_opponent_action=} ")    
 
