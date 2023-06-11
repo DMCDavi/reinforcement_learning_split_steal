@@ -14,7 +14,6 @@ class ReinforcementLearningAgent:
     self.police = open("police.txt","r")
     self.actions = {}
     self.read_police()
-    print(self.actions)
 
     
   
@@ -71,7 +70,6 @@ class ReinforcementLearningAgent:
     self.score_total += reward
     if self.score >= self.old_score:
       self.replace_police()
-      print("\n\n\n\n\n\n\nXablau\n\n\n\n\n\n\n")
     if self.last_round:
       print("Forgetting last opponent action") # Vamos mudar de agente
       self.last_opponent_action = None

@@ -39,8 +39,6 @@ class Game:
         right_decision = right_agent.decision(self.current_amount, remaining, right_agent.karma, left_agent.karma)
         assert right_decision in ["steal", "split"]        
         decisions = np.array([left_decision, right_decision])
-        print(f"Agent {left_agent.name}={left_decision}"
-              f" vs Agent {right_agent.name}={right_decision}")
         log.write(f"Agent {left_agent.name}={left_decision}"
               f" vs Agent {right_agent.name}={right_decision}\n")
             
@@ -57,8 +55,6 @@ class Game:
             right_reward = self.current_amount 
             left_reward = 0
             
-        print(f"Agent {left_agent.name} won {left_reward:.2f}"
-              f" vs Agent {right_agent.name} won {right_reward:.2f}")
         log.write(f"Agent {left_agent.name} won {left_reward:.2f}"
               f" vs Agent {right_agent.name} won {right_reward:.2f}\n")   
             
@@ -90,14 +86,11 @@ class Game:
 
     def preround_render(self):
         
-        print(f"\nRounds played: {self.rounds_played}/{self.total_rounds}")
         log.write(f"\nRounds played: {self.rounds_played}/{self.total_rounds}\n")
-        print(f"Current Amount: ${self.current_amount: .2f}")
         log.write(f"Current Amount: ${self.current_amount: .2f}\n")
 
 
     def render(self):
-        print(f"Rounds played: {self.rounds_played}/{self.total_rounds}\n")
         log.write(f"Rounds played: {self.rounds_played}/{self.total_rounds}\n\n")
 
 class Player:
@@ -112,36 +105,27 @@ class Player:
       self.karma = min(max(self.karma + value, -5), 5)
 
     def render(self, x, y):
-        print(f"Name: {self.name}")
         log.write(f"Name: {self.name}\n")
-        print(f"Amount: {self.total_amount:.2f}")
         log.write(f"Amount: {self.total_amount:.2f}\n")
 
     
     def preround_render(self, x, y):
-        print(f"Karma: {self.karma}")
         log.write(f"Karma: {self.karma}\n")
         
-        print(f"Name: {self.name}")
         log.write(f"Name: {self.name}\n")
         
-        print(f"Amount: {self.total_amount:.2f}")
         log.write((f"Amount: {self.total_amount:.2f}\n"))
         
     def render(self, x, y):
-        print(f"Karma: {self.karma}")
         log.write(f"Karma: {self.karma}\n")
    
-        print(f"Name:  {self.name}")
         log.write(f"Name: {self.name}\n")
 
 
         # Draw decision
         if self.last_decision == "split":
-            print("Split")
             log.write("Split\n")
         elif self.last_decision == "steal":
-            print("Steal")
             log.write("Steal\n")
 
 
@@ -154,7 +138,6 @@ class Player:
 
 
 def play_round(game, agent1, agent2, remaining):
-  print(f"{agent1.name} vs {agent2.name}")
   log.write(f"{agent1.name} vs {agent2.name}\n")
   game.prepare_round()
   game.preround_render()
@@ -186,7 +169,6 @@ game = Game(total_rounds)
 while not game.isOver():
   random.shuffle(agents)
   for player1, player2 in permutations(agents, 2):
-    print("==========")
     log.write("==========\n")
     for remaining in reversed(range(0, nrematches)):
       play_round(game, player1, player2, remaining)
@@ -196,13 +178,10 @@ max_score = -1
 best = None
 scores = []
 for a in agents:
-  print(f"O agente '{a.name}' obteve {a.total_amount}")
   log.write(f"O agente '{a.name}' obteve {a.total_amount}\n")
   if a.total_amount > max_score:
     best = a
     max_score = a.total_amount
-print(f"Vencedor: {best.name}")
-print(f"Score: {max_score}")
 log.write(f"Vencedor: {best.name}\n")
 log.write(f"Score: {max_score}\n")
 
