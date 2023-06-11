@@ -188,7 +188,7 @@ while not game.isOver():
   for player1, player2 in permutations(agents, 2):
     print("==========")
     log.write("==========\n")
-    for remaining in reversed(range(0, nrematches)): 
+    for remaining in reversed(range(0, nrematches)):
       play_round(game, player1, player2, remaining)
 
 

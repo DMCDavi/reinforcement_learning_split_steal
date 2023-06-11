@@ -1,588 +1,547 @@
 ==========
-Grupo/Apelido vs Karmine
+Randy vs Splitter
 
 Rounds played: 0/40
-Current Amount: $ 100.00
+Current Amount: $ 140.87
 Karma: 0
-Name: Grupo/Apelido
+Name: Randy
 Amount: 0.00
 Karma: 0
-Name: Karmine
+Name: Splitter
 Amount: 0.00
-Agent Grupo/Apelido=split vs Agent Karmine=split
-Agent Grupo/Apelido won 50.00 vs Agent Karmine won 50.00
+Agent Randy=split vs Agent Splitter=split
+Agent Randy won 70.44 vs Agent Splitter won 70.44
 Karma: 1
-Name: Grupo/Apelido
+Name: Randy
 Split
 Karma: 1
-Name: Karmine
+Name: Splitter
 Split
 Rounds played: 1/40
+
+Randy vs Splitter
+
+Rounds played: 1/40
+Current Amount: $ 100.00
+Karma: 1
+Name: Randy
+Amount: 70.44
+Karma: 1
+Name: Splitter
+Amount: 70.44
+Agent Randy=split vs Agent Splitter=split
+Agent Randy won 50.00 vs Agent Splitter won 50.00
+Karma: 2
+Name: Randy
+Split
+Karma: 2
+Name: Splitter
+Split
+Rounds played: 2/40
+
+==========
+Randy vs Grupo/Apelido
+
+Rounds played: 2/40
+Current Amount: $ 119.08
+Karma: 2
+Name: Randy
+Amount: 120.44
+Karma: 0
+Name: Grupo/Apelido
+Amount: 0.00
+Agent Randy=split vs Agent Grupo/Apelido=steal
+Agent Randy won 0.00 vs Agent Grupo/Apelido won 119.08
+Karma: 3
+Name: Randy
+Split
+Karma: -1
+Name: Grupo/Apelido
+Steal
+Rounds played: 3/40
+
+Randy vs Grupo/Apelido
+
+Rounds played: 3/40
+Current Amount: $ 186.89
+Karma: 3
+Name: Randy
+Amount: 120.44
+Karma: -1
+Name: Grupo/Apelido
+Amount: 119.08
+Agent Randy=split vs Agent Grupo/Apelido=steal
+Agent Randy won 0.00 vs Agent Grupo/Apelido won 186.89
+Karma: 4
+Name: Randy
+Split
+Karma: -2
+Name: Grupo/Apelido
+Steal
+Rounds played: 4/40
+
+==========
+Randy vs Stealer
+
+Rounds played: 4/40
+Current Amount: $ 179.70
+Karma: 4
+Name: Randy
+Amount: 120.44
+Karma: 0
+Name: Stealer
+Amount: 0.00
+Agent Randy=split vs Agent Stealer=steal
+Agent Randy won 0.00 vs Agent Stealer won 179.70
+Karma: 5
+Name: Randy
+Split
+Karma: -1
+Name: Stealer
+Steal
+Rounds played: 5/40
+
+Randy vs Stealer
+
+Rounds played: 5/40
+Current Amount: $ 146.52
+Karma: 5
+Name: Randy
+Amount: 120.44
+Karma: -1
+Name: Stealer
+Amount: 179.70
+Agent Randy=steal vs Agent Stealer=steal
+Agent Randy won 0.00 vs Agent Stealer won 0.00
+Karma: 4
+Name: Randy
+Steal
+Karma: -2
+Name: Stealer
+Steal
+Rounds played: 6/40
+
+==========
+Randy vs Karmine
+
+Rounds played: 6/40
+Current Amount: $ 100.00
+Karma: 4
+Name: Randy
+Amount: 120.44
+Karma: 0
+Name: Karmine
+Amount: 0.00
+Agent Randy=split vs Agent Karmine=split
+Agent Randy won 50.00 vs Agent Karmine won 50.00
+Karma: 5
+Name: Randy
+Split
+Karma: 1
+Name: Karmine
+Split
+Rounds played: 7/40
+
+Randy vs Karmine
+
+Rounds played: 7/40
+Current Amount: $ 137.51
+Karma: 5
+Name: Randy
+Amount: 170.44
+Karma: 1
+Name: Karmine
+Amount: 50.00
+Agent Randy=split vs Agent Karmine=split
+Agent Randy won 68.75 vs Agent Karmine won 68.75
+Karma: 5
+Name: Randy
+Split
+Karma: 2
+Name: Karmine
+Split
+Rounds played: 8/40
+
+==========
+Splitter vs Randy
+
+Rounds played: 8/40
+Current Amount: $ 100.00
+Karma: 2
+Name: Splitter
+Amount: 120.44
+Karma: 5
+Name: Randy
+Amount: 239.19
+Agent Splitter=split vs Agent Randy=split
+Agent Splitter won 50.00 vs Agent Randy won 50.00
+Karma: 3
+Name: Splitter
+Split
+Karma: 5
+Name: Randy
+Split
+Rounds played: 9/40
+
+Splitter vs Randy
+
+Rounds played: 9/40
+Current Amount: $ 100.00
+Karma: 3
+Name: Splitter
+Amount: 170.44
+Karma: 5
+Name: Randy
+Amount: 289.19
+Agent Splitter=split vs Agent Randy=steal
+Agent Splitter won 0.00 vs Agent Randy won 100.00
+Karma: 4
+Name: Splitter
+Split
+Karma: 4
+Name: Randy
+Steal
+Rounds played: 10/40
+
+==========
+Splitter vs Grupo/Apelido
+
+Rounds played: 10/40
+Current Amount: $ 100.00
+Karma: 4
+Name: Splitter
+Amount: 170.44
+Karma: -2
+Name: Grupo/Apelido
+Amount: 305.98
+Agent Splitter=split vs Agent Grupo/Apelido=split
+Agent Splitter won 50.00 vs Agent Grupo/Apelido won 50.00
+Karma: 5
+Name: Splitter
+Split
+Karma: -1
+Name: Grupo/Apelido
+Split
+Rounds played: 11/40
+
+Splitter vs Grupo/Apelido
+
+Rounds played: 11/40
+Current Amount: $ 100.00
+Karma: 5
+Name: Splitter
+Amount: 220.44
+Karma: -1
+Name: Grupo/Apelido
+Amount: 355.98
+Agent Splitter=split vs Agent Grupo/Apelido=steal
+Agent Splitter won 0.00 vs Agent Grupo/Apelido won 100.00
+Karma: 5
+Name: Splitter
+Split
+Karma: -2
+Name: Grupo/Apelido
+Steal
+Rounds played: 12/40
+
+==========
+Splitter vs Stealer
+
+Rounds played: 12/40
+Current Amount: $ 126.19
+Karma: 5
+Name: Splitter
+Amount: 220.44
+Karma: -2
+Name: Stealer
+Amount: 179.70
+Agent Splitter=split vs Agent Stealer=steal
+Agent Splitter won 0.00 vs Agent Stealer won 126.19
+Karma: 5
+Name: Splitter
+Split
+Karma: -3
+Name: Stealer
+Steal
+Rounds played: 13/40
+
+Splitter vs Stealer
+
+Rounds played: 13/40
+Current Amount: $ 201.45
+Karma: 5
+Name: Splitter
+Amount: 220.44
+Karma: -3
+Name: Stealer
+Amount: 305.89
+Agent Splitter=split vs Agent Stealer=steal
+Agent Splitter won 0.00 vs Agent Stealer won 201.45
+Karma: 5
+Name: Splitter
+Split
+Karma: -4
+Name: Stealer
+Steal
+Rounds played: 14/40
+
+==========
+Splitter vs Karmine
+
+Rounds played: 14/40
+Current Amount: $ 162.23
+Karma: 5
+Name: Splitter
+Amount: 220.44
+Karma: 2
+Name: Karmine
+Amount: 118.75
+Agent Splitter=split vs Agent Karmine=split
+Agent Splitter won 81.12 vs Agent Karmine won 81.12
+Karma: 5
+Name: Splitter
+Split
+Karma: 3
+Name: Karmine
+Split
+Rounds played: 15/40
+
+Splitter vs Karmine
+
+Rounds played: 15/40
+Current Amount: $ 100.00
+Karma: 5
+Name: Splitter
+Amount: 301.55
+Karma: 3
+Name: Karmine
+Amount: 199.87
+Agent Splitter=split vs Agent Karmine=split
+Agent Splitter won 50.00 vs Agent Karmine won 50.00
+Karma: 5
+Name: Splitter
+Split
+Karma: 4
+Name: Karmine
+Split
+Rounds played: 16/40
+
+==========
+Grupo/Apelido vs Randy
+
+Rounds played: 16/40
+Current Amount: $ 100.00
+Karma: -2
+Name: Grupo/Apelido
+Amount: 455.98
+Karma: 4
+Name: Randy
+Amount: 389.19
+Agent Grupo/Apelido=split vs Agent Randy=split
+Agent Grupo/Apelido won 50.00 vs Agent Randy won 50.00
+Karma: -1
+Name: Grupo/Apelido
+Split
+Karma: 5
+Name: Randy
+Split
+Rounds played: 17/40
+
+Grupo/Apelido vs Randy
+
+Rounds played: 17/40
+Current Amount: $ 100.00
+Karma: -1
+Name: Grupo/Apelido
+Amount: 505.98
+Karma: 5
+Name: Randy
+Amount: 439.19
+Agent Grupo/Apelido=steal vs Agent Randy=steal
+Agent Grupo/Apelido won 0.00 vs Agent Randy won 0.00
+Karma: -2
+Name: Grupo/Apelido
+Steal
+Karma: 4
+Name: Randy
+Steal
+Rounds played: 18/40
+
+==========
+Grupo/Apelido vs Splitter
+
+Rounds played: 18/40
+Current Amount: $ 100.00
+Karma: -2
+Name: Grupo/Apelido
+Amount: 505.98
+Karma: 5
+Name: Splitter
+Amount: 351.55
+Agent Grupo/Apelido=steal vs Agent Splitter=split
+Agent Grupo/Apelido won 100.00 vs Agent Splitter won 0.00
+Karma: -3
+Name: Grupo/Apelido
+Steal
+Karma: 5
+Name: Splitter
+Split
+Rounds played: 19/40
+
+Grupo/Apelido vs Splitter
+
+Rounds played: 19/40
+Current Amount: $ 100.00
+Karma: -3
+Name: Grupo/Apelido
+Amount: 605.98
+Karma: 5
+Name: Splitter
+Amount: 351.55
+Agent Grupo/Apelido=steal vs Agent Splitter=split
+Agent Grupo/Apelido won 100.00 vs Agent Splitter won 0.00
+Karma: -4
+Name: Grupo/Apelido
+Steal
+Karma: 5
+Name: Splitter
+Split
+Rounds played: 20/40
+
+==========
+Grupo/Apelido vs Stealer
+
+Rounds played: 20/40
+Current Amount: $ 151.95
+Karma: -4
+Name: Grupo/Apelido
+Amount: 705.98
+Karma: -4
+Name: Stealer
+Amount: 507.34
+Agent Grupo/Apelido=steal vs Agent Stealer=steal
+Agent Grupo/Apelido won 0.00 vs Agent Stealer won 0.00
+Karma: -5
+Name: Grupo/Apelido
+Steal
+Karma: -5
+Name: Stealer
+Steal
+Rounds played: 21/40
+
+Grupo/Apelido vs Stealer
+
+Rounds played: 21/40
+Current Amount: $ 100.00
+Karma: -5
+Name: Grupo/Apelido
+Amount: 705.98
+Karma: -5
+Name: Stealer
+Amount: 507.34
+Agent Grupo/Apelido=steal vs Agent Stealer=steal
+Agent Grupo/Apelido won 0.00 vs Agent Stealer won 0.00
+Karma: -5
+Name: Grupo/Apelido
+Steal
+Karma: -5
+Name: Stealer
+Steal
+Rounds played: 22/40
+
+==========
+Grupo/Apelido vs Karmine
+
+Rounds played: 22/40
+Current Amount: $ 164.95
+Karma: -5
+Name: Grupo/Apelido
+Amount: 705.98
+Karma: 4
+Name: Karmine
+Amount: 249.87
+Agent Grupo/Apelido=split vs Agent Karmine=steal
+Agent Grupo/Apelido won 0.00 vs Agent Karmine won 164.95
+Karma: -4
+Name: Grupo/Apelido
+Split
+Karma: 3
+Name: Karmine
+Steal
+Rounds played: 23/40
 
 Grupo/Apelido vs Karmine
 
-Rounds played: 1/40
-Current Amount: $ 100.00
-Karma: 1
-Name: Grupo/Apelido
-Amount: 50.00
-Karma: 1
-Name: Karmine
-Amount: 50.00
-Agent Grupo/Apelido=split vs Agent Karmine=split
-Agent Grupo/Apelido won 50.00 vs Agent Karmine won 50.00
-Karma: 2
-Name: Grupo/Apelido
-Split
-Karma: 2
-Name: Karmine
-Split
-Rounds played: 2/40
-
-==========
-Grupo/Apelido vs Splitter
-
-Rounds played: 2/40
-Current Amount: $ 100.00
-Karma: 2
-Name: Grupo/Apelido
-Amount: 100.00
-Karma: 0
-Name: Splitter
-Amount: 0.00
-Agent Grupo/Apelido=split vs Agent Splitter=split
-Agent Grupo/Apelido won 50.00 vs Agent Splitter won 50.00
-Karma: 3
-Name: Grupo/Apelido
-Split
-Karma: 1
-Name: Splitter
-Split
-Rounds played: 3/40
-
-Grupo/Apelido vs Splitter
-
-Rounds played: 3/40
-Current Amount: $ 100.00
-Karma: 3
-Name: Grupo/Apelido
-Amount: 150.00
-Karma: 1
-Name: Splitter
-Amount: 50.00
-Agent Grupo/Apelido=split vs Agent Splitter=split
-Agent Grupo/Apelido won 50.00 vs Agent Splitter won 50.00
-Karma: 4
-Name: Grupo/Apelido
-Split
-Karma: 2
-Name: Splitter
-Split
-Rounds played: 4/40
-
-==========
-Grupo/Apelido vs Stealer
-
-Rounds played: 4/40
-Current Amount: $ 251.25
-Karma: 4
-Name: Grupo/Apelido
-Amount: 200.00
-Karma: 0
-Name: Stealer
-Amount: 0.00
-Agent Grupo/Apelido=split vs Agent Stealer=steal
-Agent Grupo/Apelido won 0.00 vs Agent Stealer won 251.25
-Karma: 5
-Name: Grupo/Apelido
-Split
-Karma: -1
-Name: Stealer
-Steal
-Rounds played: 5/40
-
-Grupo/Apelido vs Stealer
-
-Rounds played: 5/40
-Current Amount: $ 100.00
-Karma: 5
-Name: Grupo/Apelido
-Amount: 200.00
-Karma: -1
-Name: Stealer
-Amount: 251.25
-Agent Grupo/Apelido=steal vs Agent Stealer=steal
-Agent Grupo/Apelido won 0.00 vs Agent Stealer won 0.00
-Karma: 4
-Name: Grupo/Apelido
-Steal
-Karma: -2
-Name: Stealer
-Steal
-Rounds played: 6/40
-
-==========
-Grupo/Apelido vs Randy
-
-Rounds played: 6/40
-Current Amount: $ 100.00
-Karma: 4
-Name: Grupo/Apelido
-Amount: 200.00
-Karma: 0
-Name: Randy
-Amount: 0.00
-Agent Grupo/Apelido=split vs Agent Randy=steal
-Agent Grupo/Apelido won 0.00 vs Agent Randy won 100.00
-Karma: 5
-Name: Grupo/Apelido
-Split
-Karma: -1
-Name: Randy
-Steal
-Rounds played: 7/40
-
-Grupo/Apelido vs Randy
-
-Rounds played: 7/40
-Current Amount: $ 187.07
-Karma: 5
-Name: Grupo/Apelido
-Amount: 200.00
-Karma: -1
-Name: Randy
-Amount: 100.00
-Agent Grupo/Apelido=steal vs Agent Randy=steal
-Agent Grupo/Apelido won 0.00 vs Agent Randy won 0.00
-Karma: 4
-Name: Grupo/Apelido
-Steal
-Karma: -2
-Name: Randy
-Steal
-Rounds played: 8/40
-
-==========
-Karmine vs Grupo/Apelido
-
-Rounds played: 8/40
-Current Amount: $ 175.98
-Karma: 2
-Name: Karmine
-Amount: 100.00
-Karma: 4
-Name: Grupo/Apelido
-Amount: 200.00
-Agent Karmine=split vs Agent Grupo/Apelido=split
-Agent Karmine won 87.99 vs Agent Grupo/Apelido won 87.99
-Karma: 3
-Name: Karmine
-Split
-Karma: 5
-Name: Grupo/Apelido
-Split
-Rounds played: 9/40
-
-Karmine vs Grupo/Apelido
-
-Rounds played: 9/40
-Current Amount: $ 100.00
-Karma: 3
-Name: Karmine
-Amount: 187.99
-Karma: 5
-Name: Grupo/Apelido
-Amount: 287.99
-Agent Karmine=split vs Agent Grupo/Apelido=split
-Agent Karmine won 50.00 vs Agent Grupo/Apelido won 50.00
-Karma: 4
-Name: Karmine
-Split
-Karma: 5
-Name: Grupo/Apelido
-Split
-Rounds played: 10/40
-
-==========
-Karmine vs Splitter
-
-Rounds played: 10/40
-Current Amount: $ 144.62
-Karma: 4
-Name: Karmine
-Amount: 237.99
-Karma: 2
-Name: Splitter
-Amount: 100.00
-Agent Karmine=split vs Agent Splitter=split
-Agent Karmine won 72.31 vs Agent Splitter won 72.31
-Karma: 5
-Name: Karmine
-Split
-Karma: 3
-Name: Splitter
-Split
-Rounds played: 11/40
-
-Karmine vs Splitter
-
-Rounds played: 11/40
-Current Amount: $ 100.00
-Karma: 5
-Name: Karmine
-Amount: 310.30
-Karma: 3
-Name: Splitter
-Amount: 172.31
-Agent Karmine=split vs Agent Splitter=split
-Agent Karmine won 50.00 vs Agent Splitter won 50.00
-Karma: 5
-Name: Karmine
-Split
-Karma: 4
-Name: Splitter
-Split
-Rounds played: 12/40
-
-==========
-Karmine vs Stealer
-
-Rounds played: 12/40
-Current Amount: $ 175.59
-Karma: 5
-Name: Karmine
-Amount: 360.30
-Karma: -2
-Name: Stealer
-Amount: 251.25
-Agent Karmine=steal vs Agent Stealer=steal
-Agent Karmine won 0.00 vs Agent Stealer won 0.00
-Karma: 4
-Name: Karmine
-Steal
-Karma: -3
-Name: Stealer
-Steal
-Rounds played: 13/40
-
-Karmine vs Stealer
-
-Rounds played: 13/40
-Current Amount: $ 142.26
-Karma: 4
-Name: Karmine
-Amount: 360.30
-Karma: -3
-Name: Stealer
-Amount: 251.25
-Agent Karmine=steal vs Agent Stealer=steal
-Agent Karmine won 0.00 vs Agent Stealer won 0.00
-Karma: 3
-Name: Karmine
-Steal
-Karma: -4
-Name: Stealer
-Steal
-Rounds played: 14/40
-
-==========
-Karmine vs Randy
-
-Rounds played: 14/40
-Current Amount: $ 100.00
-Karma: 3
-Name: Karmine
-Amount: 360.30
-Karma: -2
-Name: Randy
-Amount: 100.00
-Agent Karmine=steal vs Agent Randy=steal
-Agent Karmine won 0.00 vs Agent Randy won 0.00
-Karma: 2
-Name: Karmine
-Steal
-Karma: -3
-Name: Randy
-Steal
-Rounds played: 15/40
-
-Karmine vs Randy
-
-Rounds played: 15/40
-Current Amount: $ 218.08
-Karma: 2
-Name: Karmine
-Amount: 360.30
-Karma: -3
-Name: Randy
-Amount: 100.00
-Agent Karmine=steal vs Agent Randy=split
-Agent Karmine won 218.08 vs Agent Randy won 0.00
-Karma: 1
-Name: Karmine
-Steal
-Karma: -2
-Name: Randy
-Split
-Rounds played: 16/40
-
-==========
-Splitter vs Grupo/Apelido
-
-Rounds played: 16/40
-Current Amount: $ 168.35
-Karma: 4
-Name: Splitter
-Amount: 222.31
-Karma: 5
-Name: Grupo/Apelido
-Amount: 337.99
-Agent Splitter=split vs Agent Grupo/Apelido=split
-Agent Splitter won 84.17 vs Agent Grupo/Apelido won 84.17
-Karma: 5
-Name: Splitter
-Split
-Karma: 5
-Name: Grupo/Apelido
-Split
-Rounds played: 17/40
-
-Splitter vs Grupo/Apelido
-
-Rounds played: 17/40
-Current Amount: $ 213.56
-Karma: 5
-Name: Splitter
-Amount: 306.48
-Karma: 5
-Name: Grupo/Apelido
-Amount: 422.16
-Agent Splitter=split vs Agent Grupo/Apelido=split
-Agent Splitter won 106.78 vs Agent Grupo/Apelido won 106.78
-Karma: 5
-Name: Splitter
-Split
-Karma: 5
-Name: Grupo/Apelido
-Split
-Rounds played: 18/40
-
-==========
-Splitter vs Karmine
-
-Rounds played: 18/40
-Current Amount: $ 100.00
-Karma: 5
-Name: Splitter
-Amount: 413.27
-Karma: 1
-Name: Karmine
-Amount: 578.38
-Agent Splitter=split vs Agent Karmine=split
-Agent Splitter won 50.00 vs Agent Karmine won 50.00
-Karma: 5
-Name: Splitter
-Split
-Karma: 2
-Name: Karmine
-Split
-Rounds played: 19/40
-
-Splitter vs Karmine
-
-Rounds played: 19/40
-Current Amount: $ 100.00
-Karma: 5
-Name: Splitter
-Amount: 463.27
-Karma: 2
-Name: Karmine
-Amount: 628.38
-Agent Splitter=split vs Agent Karmine=split
-Agent Splitter won 50.00 vs Agent Karmine won 50.00
-Karma: 5
-Name: Splitter
-Split
-Karma: 3
-Name: Karmine
-Split
-Rounds played: 20/40
-
-==========
-Splitter vs Stealer
-
-Rounds played: 20/40
-Current Amount: $ 100.00
-Karma: 5
-Name: Splitter
-Amount: 513.27
-Karma: -4
-Name: Stealer
-Amount: 251.25
-Agent Splitter=split vs Agent Stealer=steal
-Agent Splitter won 0.00 vs Agent Stealer won 100.00
-Karma: 5
-Name: Splitter
-Split
-Karma: -5
-Name: Stealer
-Steal
-Rounds played: 21/40
-
-Splitter vs Stealer
-
-Rounds played: 21/40
-Current Amount: $ 116.95
-Karma: 5
-Name: Splitter
-Amount: 513.27
-Karma: -5
-Name: Stealer
-Amount: 351.25
-Agent Splitter=split vs Agent Stealer=steal
-Agent Splitter won 0.00 vs Agent Stealer won 116.95
-Karma: 5
-Name: Splitter
-Split
-Karma: -5
-Name: Stealer
-Steal
-Rounds played: 22/40
-
-==========
-Splitter vs Randy
-
-Rounds played: 22/40
-Current Amount: $ 100.00
-Karma: 5
-Name: Splitter
-Amount: 513.27
-Karma: -2
-Name: Randy
-Amount: 100.00
-Agent Splitter=split vs Agent Randy=steal
-Agent Splitter won 0.00 vs Agent Randy won 100.00
-Karma: 5
-Name: Splitter
-Split
-Karma: -3
-Name: Randy
-Steal
 Rounds played: 23/40
-
-Splitter vs Randy
-
-Rounds played: 23/40
-Current Amount: $ 100.00
-Karma: 5
-Name: Splitter
-Amount: 513.27
-Karma: -3
-Name: Randy
-Amount: 200.00
-Agent Splitter=split vs Agent Randy=split
-Agent Splitter won 50.00 vs Agent Randy won 50.00
-Karma: 5
-Name: Splitter
-Split
-Karma: -2
-Name: Randy
-Split
+Current Amount: $ 132.93
+Karma: -4
+Name: Grupo/Apelido
+Amount: 705.98
+Karma: 3
+Name: Karmine
+Amount: 414.82
+Agent Grupo/Apelido=steal vs Agent Karmine=steal
+Agent Grupo/Apelido won 0.00 vs Agent Karmine won 0.00
+Karma: -5
+Name: Grupo/Apelido
+Steal
+Karma: 2
+Name: Karmine
+Steal
 Rounds played: 24/40
 
 ==========
-Stealer vs Grupo/Apelido
+Stealer vs Randy
 
 Rounds played: 24/40
 Current Amount: $ 100.00
 Karma: -5
 Name: Stealer
-Amount: 468.20
-Karma: 5
-Name: Grupo/Apelido
-Amount: 528.95
-Agent Stealer=steal vs Agent Grupo/Apelido=split
-Agent Stealer won 100.00 vs Agent Grupo/Apelido won 0.00
+Amount: 507.34
+Karma: 4
+Name: Randy
+Amount: 439.19
+Agent Stealer=steal vs Agent Randy=split
+Agent Stealer won 100.00 vs Agent Randy won 0.00
 Karma: -5
 Name: Stealer
 Steal
 Karma: 5
-Name: Grupo/Apelido
+Name: Randy
 Split
 Rounds played: 25/40
 
-Stealer vs Grupo/Apelido
+Stealer vs Randy
 
 Rounds played: 25/40
-Current Amount: $ 165.89
+Current Amount: $ 100.00
 Karma: -5
 Name: Stealer
-Amount: 568.20
+Amount: 607.34
 Karma: 5
-Name: Grupo/Apelido
-Amount: 528.95
-Agent Stealer=steal vs Agent Grupo/Apelido=steal
-Agent Stealer won 0.00 vs Agent Grupo/Apelido won 0.00
+Name: Randy
+Amount: 439.19
+Agent Stealer=steal vs Agent Randy=steal
+Agent Stealer won 0.00 vs Agent Randy won 0.00
 Karma: -5
 Name: Stealer
 Steal
 Karma: 4
-Name: Grupo/Apelido
+Name: Randy
 Steal
 Rounds played: 26/40
-
-==========
-Stealer vs Karmine
-
-Rounds played: 26/40
-Current Amount: $ 100.00
-Karma: -5
-Name: Stealer
-Amount: 568.20
-Karma: 3
-Name: Karmine
-Amount: 678.38
-Agent Stealer=steal vs Agent Karmine=steal
-Agent Stealer won 0.00 vs Agent Karmine won 0.00
-Karma: -5
-Name: Stealer
-Steal
-Karma: 2
-Name: Karmine
-Steal
-Rounds played: 27/40
-
-Stealer vs Karmine
-
-Rounds played: 27/40
-Current Amount: $ 100.00
-Karma: -5
-Name: Stealer
-Amount: 568.20
-Karma: 2
-Name: Karmine
-Amount: 678.38
-Agent Stealer=steal vs Agent Karmine=steal
-Agent Stealer won 0.00 vs Agent Karmine won 0.00
-Karma: -5
-Name: Stealer
-Steal
-Karma: 1
-Name: Karmine
-Steal
-Rounds played: 28/40
 
 ==========
 Stealer vs Splitter
 
-Rounds played: 28/40
+Rounds played: 26/40
 Current Amount: $ 100.00
 Karma: -5
 Name: Stealer
-Amount: 568.20
+Amount: 607.34
 Karma: 5
 Name: Splitter
-Amount: 563.27
+Amount: 351.55
 Agent Stealer=steal vs Agent Splitter=split
 Agent Stealer won 100.00 vs Agent Splitter won 0.00
 Karma: -5
@@ -591,237 +550,278 @@ Steal
 Karma: 5
 Name: Splitter
 Split
-Rounds played: 29/40
+Rounds played: 27/40
 
 Stealer vs Splitter
 
-Rounds played: 29/40
-Current Amount: $ 159.62
+Rounds played: 27/40
+Current Amount: $ 100.00
 Karma: -5
 Name: Stealer
-Amount: 668.20
+Amount: 707.34
 Karma: 5
 Name: Splitter
-Amount: 563.27
+Amount: 351.55
 Agent Stealer=steal vs Agent Splitter=split
-Agent Stealer won 159.62 vs Agent Splitter won 0.00
+Agent Stealer won 100.00 vs Agent Splitter won 0.00
 Karma: -5
 Name: Stealer
 Steal
 Karma: 5
 Name: Splitter
 Split
+Rounds played: 28/40
+
+==========
+Stealer vs Grupo/Apelido
+
+Rounds played: 28/40
+Current Amount: $ 284.82
+Karma: -5
+Name: Stealer
+Amount: 807.34
+Karma: -5
+Name: Grupo/Apelido
+Amount: 705.98
+Agent Stealer=steal vs Agent Grupo/Apelido=steal
+Agent Stealer won 0.00 vs Agent Grupo/Apelido won 0.00
+Karma: -5
+Name: Stealer
+Steal
+Karma: -5
+Name: Grupo/Apelido
+Steal
+Rounds played: 29/40
+
+Stealer vs Grupo/Apelido
+
+Rounds played: 29/40
+Current Amount: $ 218.45
+Karma: -5
+Name: Stealer
+Amount: 807.34
+Karma: -5
+Name: Grupo/Apelido
+Amount: 705.98
+Agent Stealer=steal vs Agent Grupo/Apelido=steal
+Agent Stealer won 0.00 vs Agent Grupo/Apelido won 0.00
+Karma: -5
+Name: Stealer
+Steal
+Karma: -5
+Name: Grupo/Apelido
+Steal
 Rounds played: 30/40
 
 ==========
-Stealer vs Randy
+Stealer vs Karmine
 
 Rounds played: 30/40
 Current Amount: $ 100.00
 Karma: -5
 Name: Stealer
-Amount: 827.81
-Karma: -2
-Name: Randy
-Amount: 250.00
-Agent Stealer=steal vs Agent Randy=split
-Agent Stealer won 100.00 vs Agent Randy won 0.00
+Amount: 807.34
+Karma: 2
+Name: Karmine
+Amount: 414.82
+Agent Stealer=steal vs Agent Karmine=steal
+Agent Stealer won 0.00 vs Agent Karmine won 0.00
 Karma: -5
 Name: Stealer
 Steal
-Karma: -1
-Name: Randy
-Split
+Karma: 1
+Name: Karmine
+Steal
 Rounds played: 31/40
 
-Stealer vs Randy
+Stealer vs Karmine
 
 Rounds played: 31/40
-Current Amount: $ 243.92
+Current Amount: $ 100.00
 Karma: -5
 Name: Stealer
-Amount: 927.81
-Karma: -1
-Name: Randy
-Amount: 250.00
-Agent Stealer=steal vs Agent Randy=split
-Agent Stealer won 243.92 vs Agent Randy won 0.00
+Amount: 807.34
+Karma: 1
+Name: Karmine
+Amount: 414.82
+Agent Stealer=steal vs Agent Karmine=steal
+Agent Stealer won 0.00 vs Agent Karmine won 0.00
 Karma: -5
 Name: Stealer
 Steal
 Karma: 0
-Name: Randy
-Split
+Name: Karmine
+Steal
 Rounds played: 32/40
 
 ==========
-Randy vs Grupo/Apelido
+Karmine vs Randy
 
 Rounds played: 32/40
 Current Amount: $ 100.00
 Karma: 0
-Name: Randy
-Amount: 250.00
+Name: Karmine
+Amount: 414.82
 Karma: 4
-Name: Grupo/Apelido
-Amount: 528.95
-Agent Randy=split vs Agent Grupo/Apelido=split
-Agent Randy won 50.00 vs Agent Grupo/Apelido won 50.00
-Karma: 1
 Name: Randy
+Amount: 439.19
+Agent Karmine=split vs Agent Randy=split
+Agent Karmine won 50.00 vs Agent Randy won 50.00
+Karma: 1
+Name: Karmine
 Split
 Karma: 5
-Name: Grupo/Apelido
+Name: Randy
 Split
 Rounds played: 33/40
 
-Randy vs Grupo/Apelido
+Karmine vs Randy
 
 Rounds played: 33/40
-Current Amount: $ 177.81
-Karma: 1
-Name: Randy
-Amount: 300.00
-Karma: 5
-Name: Grupo/Apelido
-Amount: 578.95
-Agent Randy=steal vs Agent Grupo/Apelido=split
-Agent Randy won 177.81 vs Agent Grupo/Apelido won 0.00
-Karma: 0
-Name: Randy
-Steal
-Karma: 5
-Name: Grupo/Apelido
-Split
-Rounds played: 34/40
-
-==========
-Randy vs Karmine
-
-Rounds played: 34/40
-Current Amount: $ 285.02
-Karma: 0
-Name: Randy
-Amount: 477.81
+Current Amount: $ 100.00
 Karma: 1
 Name: Karmine
-Amount: 678.38
-Agent Randy=steal vs Agent Karmine=split
-Agent Randy won 285.02 vs Agent Karmine won 0.00
-Karma: -1
+Amount: 464.82
+Karma: 5
 Name: Randy
-Steal
+Amount: 489.19
+Agent Karmine=split vs Agent Randy=steal
+Agent Karmine won 0.00 vs Agent Randy won 100.00
 Karma: 2
 Name: Karmine
 Split
-Rounds played: 35/40
-
-Randy vs Karmine
-
-Rounds played: 35/40
-Current Amount: $ 189.66
-Karma: -1
+Karma: 4
 Name: Randy
-Amount: 762.83
+Steal
+Rounds played: 34/40
+
+==========
+Karmine vs Splitter
+
+Rounds played: 34/40
+Current Amount: $ 209.28
 Karma: 2
 Name: Karmine
-Amount: 678.38
-Agent Randy=steal vs Agent Karmine=steal
-Agent Randy won 0.00 vs Agent Karmine won 0.00
-Karma: -2
-Name: Randy
-Steal
-Karma: 1
+Amount: 464.82
+Karma: 5
+Name: Splitter
+Amount: 351.55
+Agent Karmine=split vs Agent Splitter=split
+Agent Karmine won 104.64 vs Agent Splitter won 104.64
+Karma: 3
+Name: Karmine
+Split
+Karma: 5
+Name: Splitter
+Split
+Rounds played: 35/40
+
+Karmine vs Splitter
+
+Rounds played: 35/40
+Current Amount: $ 145.67
+Karma: 3
+Name: Karmine
+Amount: 569.47
+Karma: 5
+Name: Splitter
+Amount: 456.19
+Agent Karmine=split vs Agent Splitter=split
+Agent Karmine won 72.84 vs Agent Splitter won 72.84
+Karma: 4
+Name: Karmine
+Split
+Karma: 5
+Name: Splitter
+Split
+Rounds played: 36/40
+
+==========
+Karmine vs Grupo/Apelido
+
+Rounds played: 36/40
+Current Amount: $ 134.96
+Karma: 4
+Name: Karmine
+Amount: 642.30
+Karma: -5
+Name: Grupo/Apelido
+Amount: 705.98
+Agent Karmine=steal vs Agent Grupo/Apelido=split
+Agent Karmine won 134.96 vs Agent Grupo/Apelido won 0.00
+Karma: 3
 Name: Karmine
 Steal
-Rounds played: 36/40
-
-==========
-Randy vs Splitter
-
-Rounds played: 36/40
-Current Amount: $ 100.00
-Karma: -2
-Name: Randy
-Amount: 762.83
-Karma: 5
-Name: Splitter
-Amount: 563.27
-Agent Randy=steal vs Agent Splitter=split
-Agent Randy won 100.00 vs Agent Splitter won 0.00
-Karma: -3
-Name: Randy
-Steal
-Karma: 5
-Name: Splitter
+Karma: -4
+Name: Grupo/Apelido
 Split
 Rounds played: 37/40
 
-Randy vs Splitter
+Karmine vs Grupo/Apelido
 
 Rounds played: 37/40
-Current Amount: $ 155.17
-Karma: -3
-Name: Randy
-Amount: 862.83
-Karma: 5
-Name: Splitter
-Amount: 563.27
-Agent Randy=steal vs Agent Splitter=split
-Agent Randy won 155.17 vs Agent Splitter won 0.00
+Current Amount: $ 100.00
+Karma: 3
+Name: Karmine
+Amount: 777.26
 Karma: -4
-Name: Randy
+Name: Grupo/Apelido
+Amount: 705.98
+Agent Karmine=steal vs Agent Grupo/Apelido=steal
+Agent Karmine won 0.00 vs Agent Grupo/Apelido won 0.00
+Karma: 2
+Name: Karmine
 Steal
-Karma: 5
-Name: Splitter
-Split
+Karma: -5
+Name: Grupo/Apelido
+Steal
 Rounds played: 38/40
 
 ==========
-Randy vs Stealer
+Karmine vs Stealer
 
 Rounds played: 38/40
 Current Amount: $ 100.00
-Karma: -4
-Name: Randy
-Amount: 1018.00
+Karma: 2
+Name: Karmine
+Amount: 777.26
 Karma: -5
 Name: Stealer
-Amount: 1171.73
-Agent Randy=steal vs Agent Stealer=steal
-Agent Randy won 0.00 vs Agent Stealer won 0.00
-Karma: -5
-Name: Randy
+Amount: 807.34
+Agent Karmine=steal vs Agent Stealer=steal
+Agent Karmine won 0.00 vs Agent Stealer won 0.00
+Karma: 1
+Name: Karmine
 Steal
 Karma: -5
 Name: Stealer
 Steal
 Rounds played: 39/40
 
-Randy vs Stealer
+Karmine vs Stealer
 
 Rounds played: 39/40
-Current Amount: $ 178.23
-Karma: -5
-Name: Randy
-Amount: 1018.00
+Current Amount: $ 100.00
+Karma: 1
+Name: Karmine
+Amount: 777.26
 Karma: -5
 Name: Stealer
-Amount: 1171.73
-Agent Randy=steal vs Agent Stealer=steal
-Agent Randy won 0.00 vs Agent Stealer won 0.00
-Karma: -5
-Name: Randy
+Amount: 807.34
+Agent Karmine=steal vs Agent Stealer=steal
+Agent Karmine won 0.00 vs Agent Stealer won 0.00
+Karma: 0
+Name: Karmine
 Steal
 Karma: -5
 Name: Stealer
 Steal
 Rounds played: 40/40
 
-O agente 'Grupo/Apelido' obteve 578.9461725700077
-O agente 'Karmine' obteve 678.3751604572396
-O agente 'Splitter' obteve 563.2669695850365
-O agente 'Stealer' obteve 1171.7335221950327
-O agente 'Randy' obteve 1017.9992011565682
+O agente 'Randy' obteve 589.1913917871575
+O agente 'Splitter' obteve 529.0298532149318
+O agente 'Grupo/Apelido' obteve 705.9752426765695
+O agente 'Stealer' obteve 807.3385062798648
+O agente 'Karmine' obteve 777.263786663116
 Vencedor: Stealer
-Score: 1171.7335221950327
+Score: 807.3385062798648
