@@ -155,6 +155,8 @@ def play_round(game, agent1, agent2, remaining):
 
 ntrains = 500
 for i in range(ntrains):
+  log.close()
+  log = open("Log.txt","w")
   # Create agents
   agent1 = Player(simple_opponents.Splitter())
   agent2 = Player(simple_opponents.Stealer())
