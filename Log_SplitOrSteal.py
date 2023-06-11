@@ -94,8 +94,8 @@ class Game:
         log.write(f"\nRounds played: {self.rounds_played}/{self.total_rounds}\n")
         print(f"Current Amount: ${self.current_amount: .2f}")
         log.write(f"Current Amount: ${self.current_amount: .2f}\n")
-                 
-        
+
+
     def render(self):
         print(f"Rounds played: {self.rounds_played}/{self.total_rounds}\n")
         log.write(f"Rounds played: {self.rounds_played}/{self.total_rounds}\n\n")
@@ -112,8 +112,8 @@ class Player:
       self.karma = min(max(self.karma + value, -5), 5)
 
     def render(self, x, y):
-        print(f"Name: ${self.name}")
-        log.write(f"Name: ${self.name}\n")
+        print(f"Name: {self.name}")
+        log.write(f"Name: {self.name}\n")
         print(f"Amount: {self.total_amount:.2f}")
         log.write(f"Amount: {self.total_amount:.2f}\n")
 
@@ -132,8 +132,8 @@ class Player:
         print(f"Karma: {self.karma}")
         log.write(f"Karma: {self.karma}\n")
    
-        print("Name: ${self.name}")
-        log.write("Name: ${self.name}\n")
+        print(f"Name:  {self.name}")
+        log.write(f"Name: {self.name}\n")
 
 
         # Draw decision
