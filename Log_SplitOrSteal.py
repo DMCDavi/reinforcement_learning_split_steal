@@ -1,36 +1,9 @@
-#import pygame
 import random
 import numpy as np
 from itertools import permutations
 import simple_opponents
 import your_agent
 
-# Initialize Pygame
-#pygame.init()
-
-# Set up the screen
-#screen_width = 800
-#screen_height = 600
-#screen = pygame.display.set_mode((screen_width, screen_height))
-#pygame.display.set_caption("Split or Steal")
-
-# Define colors
-#BLACK = (0, 0, 0)
-#WHITE = (255, 255, 255)
-#GREEN = (0, 255, 0)
-#RED = (255, 0, 0)
-
-# Load images
-#split_img = pygame.image.load('split.png')
-#steal_img = pygame.image.load('steal.png')
-#doubt_img = pygame.image.load('card_back.png')
-#background_image = pygame.image.load("background.png")
-#background_image = pygame.transform.scale(background_image, (screen_width, screen_height))
-# Scale images
-#image_scale = 0.5
-#split_img = pygame.transform.scale(split_img, (int(196 * image_scale), int(128 * image_scale)))
-#steal_img = pygame.transform.scale(steal_img, (int(196 * image_scale), int(128 * image_scale)))
-#doubt_img = pygame.transform.scale(doubt_img, (int(196 * image_scale), int(128 * image_scale)))
 
 mean = 100
 variance = 10000  # Large variance
@@ -38,8 +11,6 @@ variance = 10000  # Large variance
 #Create Log file
 log = open("Log.txt","w")
 
-# Fonts
-#font = pygame.font.SysFont(None, 24)
 
 # Game settings
 rounds_to_play = 10
@@ -118,25 +89,14 @@ class Game:
                       
 
     def preround_render(self):
-        # Render agent's name and stats
-        #rounds_text = font.render(f"Rounds played: {self.rounds_played}/{self.total_rounds}", True, BLACK)   
         
         print(f"\nRounds played: {self.rounds_played}/{self.total_rounds}")
         log.write(f"\nRounds played: {self.rounds_played}/{self.total_rounds}\n")
-        #screen.blit(rounds_text, (320, 50))   
-        
-        #font_size = 72
-        #myfont = pygame.font.Font(None, font_size)        
-        #amount_text = myfont.render(f"$ {self.current_amount:.2f}", True, BLACK)   
-        #screen.blit(amount_text, (350, 200))
         print(f"Current Amount: ${self.current_amount: .2f}")
         log.write(f"Current Amount: ${self.current_amount: .2f}\n")
                  
         
     def render(self):
-        # Render agent's name and stats
-        #rounds_text = font.render(f"Rounds played: {self.rounds_played}/{self.total_rounds}", True, BLACK)   
-        #screen.blit(rounds_text, (320, 50))         
         print(f"Rounds played: {self.rounds_played}/{self.total_rounds}\n")
         log.write(f"Rounds played: {self.rounds_played}/{self.total_rounds}\n\n")
 
@@ -152,69 +112,35 @@ class Player:
       self.karma = min(max(self.karma + value, -5), 5)
 
     def render(self, x, y):
-        # Draw background rectangle
-        #pygame.draw.rect(screen, BLACK, (x, y, 200, 80))
-
-        # Draw agent's name and stats
-        #name_text = font.render(self.name, True, WHITE) 
         print(f"Name: ${self.name}")
         log.write(f"Name: ${self.name}\n")
-        #screen.blit(name_text, (x + 10, y + 10))
-        #amount_text = font.render(f"Amount: {self.total_amount:.2f}", True, WHITE)        
-        #screen.blit(amount_text, (x + 10, y + 30))
         print(f"Amount: {self.total_amount:.2f}")
         log.write(f"Amount: {self.total_amount:.2f}\n")
 
-        #if self.last_decision == "split":
-            #screen.blit(split_img, (x + 150, y + 10))
-        #elif self.last_decision == "steal":
-            #screen.blit(steal_img, (x + 150, y + 10))
-
     
     def preround_render(self, x, y):
-        # Draw agent's name and stats
-        #pygame.draw.rect(screen, BLACK, (x, y, 200, 80))        
-        #karma_text = font.render(f"Karma: {self.karma}", True, WHITE)        
-        #screen.blit(karma_text, (x + 10, y + 50))
         print(f"Karma: {self.karma}")
         log.write(f"Karma: {self.karma}\n")
         
-        #name_text = font.render(self.name, True, WHITE)        
-        #screen.blit(name_text, (x + 10, y + 10))  
         print(f"Name: {self.name}")
         log.write(f"Name: {self.name}\n")
-              
-        #amount_text = font.render(f"Amount: {self.total_amount:.2f}", True, WHITE)        
-        #screen.blit(amount_text, (x + 10, y + 30))    
-        #screen.blit(doubt_img, (x + 150, y + 10))
+        
         print(f"Amount: {self.total_amount:.2f}")
         log.write((f"Amount: {self.total_amount:.2f}\n"))
         
     def render(self, x, y):
-        # Draw background rectangle
-        #pygame.draw.rect(screen, BLACK, (x, y, 200, 80))
-
-        #karma_text = font.render(f"Karma: {self.karma}", True, WHITE)        
-        #screen.blit(karma_text, (x + 10, y + 50))
         print(f"Karma: {self.karma}")
         log.write(f"Karma: {self.karma}\n")
-
-        # Draw agent's name and stats
-        #name_text = font.render(self.name, True, WHITE)        
+   
         print("Name: ${self.name}")
         log.write("Name: ${self.name}\n")
-        #screen.blit(name_text, (x + 10, y + 10))
-        #amount_text = font.render(f"Amount: {self.total_amount:.2f}", True, WHITE)        
-        #screen.blit(amount_text, (x + 10, y + 30))
 
 
-        # Draw decision image
+        # Draw decision
         if self.last_decision == "split":
-            #screen.blit(split_img, (x + 150, y + 10))
             print("Split")
             log.write("Split\n")
         elif self.last_decision == "steal":
-            #screen.blit(steal_img, (x + 150, y + 10))
             print("Steal")
             log.write("Steal\n")
 
@@ -230,43 +156,21 @@ class Player:
 def play_round(game, agent1, agent2, remaining):
   print(f"{agent1.name} vs {agent2.name}")
   log.write(f"{agent1.name} vs {agent2.name}\n")
-  # Clear the screen
-  #screen.fill(BLACK)
-  #screen.blit(background_image, (0, 0))
   game.prepare_round()
   game.preround_render()
   agent1.preround_render(50, 50)
   agent2.preround_render(550, 50)        
 
-  # Update the screen
-  #pygame.display.flip()
-  #for _ in range(4): 
-    #pygame.time.wait(1000)    
-  
-
-  # Handle events
-  #for event in pygame.event.get():
-      #if event.type == pygame.QUIT:
-          #pygame.quit()
-          #exit()
-
   # Play a round
   game.play_round(agent1, agent2, remaining)
 
   # Render agents    
-  #screen.fill(BLACK) 
-  #screen.blit(background_image, (0, 0))    
-  #agent1.render(50, 50)
-  #agent2.render(550, 50)
+  agent1.render(50, 50)
+  agent2.render(550, 50)
   game.render()
 
- # Update the screen
-  #pygame.display.flip()
-  #for _ in range(4): 
-    #pygame.time.wait(1000)  
 
-
-# Create two agents
+# Create agents
 agent1 = Player(simple_opponents.Splitter())
 agent2 = Player(simple_opponents.Stealer())
 agent3 = Player(simple_opponents.Randy())
