@@ -3,6 +3,7 @@ import numpy as np
 from itertools import permutations
 import simple_opponents
 import your_agent
+import train_agent_5
 
 
 mean = 100
@@ -19,10 +20,11 @@ class Game:
     def __init__ (self, total_rounds):
         self.rounds_played = 0
         self.total_rounds = total_rounds 
-        self.current_amount = 0 
+        self.current_amount = 0
+        
         
     def isOver(self):
-        return self.rounds_played >= self.total_rounds;    
+        return self.rounds_played >= self.total_rounds
         
     def prepare_round(self):
         # Generate random values for total amount and rounds played
@@ -91,7 +93,8 @@ class Game:
 
 
     def render(self):
-        log.write(f"Rounds played: {self.rounds_played}/{self.total_rounds}\n\n")
+        #log.write(f"Rounds played: {self.rounds_played}/{self.total_rounds}\n\n")
+        pass
 
 class Player:
     def __init__(self, agent):
@@ -105,28 +108,31 @@ class Player:
       self.karma = min(max(self.karma + value, -5), 5)
 
     def render(self, x, y):
-        log.write(f"Name: {self.name}\n")
-        log.write(f"Amount: {self.total_amount:.2f}\n")
+        #log.write(f"Name: {self.name}\n")
+        #log.write(f"Amount: {self.total_amount:.2f}\n")
+        pass
 
     
     def preround_render(self, x, y):
-        log.write(f"Karma: {self.karma}\n")
+        #log.write(f"Karma: {self.karma}\n")
         
-        log.write(f"Name: {self.name}\n")
+        #log.write(f"Name: {self.name}\n")
         
-        log.write((f"Amount: {self.total_amount:.2f}\n"))
+        #log.write((f"Amount: {self.total_amount:.2f}\n"))
+        pass
         
     def render(self, x, y):
-        log.write(f"Karma: {self.karma}\n")
+        #log.write(f"Karma: {self.karma}\n")
    
-        log.write(f"Name: {self.name}\n")
+        #log.write(f"Name: {self.name}\n")
+        pass
 
 
         # Draw decision
-        if self.last_decision == "split":
-            log.write("Split\n")
-        elif self.last_decision == "steal":
-            log.write("Steal\n")
+        #if self.last_decision == "split":
+            #log.write("Split\n")
+        #elif self.last_decision == "steal":
+            #log.write("Steal\n")
 
 
     def decision(self, total_amount, rounds_played, your_karma, his_karma):
@@ -152,31 +158,35 @@ def play_round(game, agent1, agent2, remaining):
   agent2.render(550, 50)
   game.render()
 
+ntrains = 1
+for i in range(ntrains):
+  log.close()
+  log = open("Log.txt","w")
+  # Create agents
+  agent1 = Player(simple_opponents.Splitter())
+  agent2 = Player(simple_opponents.Stealer())
+  agent3 = Player(simple_opponents.Randy())
+  agent4 = Player(simple_opponents.Karmine())
+  agents = [agent1, agent2, agent3, agent4, Player(train_agent_5.ReinforcementLearningAgent())]
 
-# Create agents
-agent1 = Player(simple_opponents.Splitter())
-agent2 = Player(simple_opponents.Stealer())
-agent3 = Player(simple_opponents.Randy())
-agent4 = Player(simple_opponents.Karmine())
-agents = [agent1, agent2, agent3, agent4, Player(your_agent.ReinforcementLearningAgent())]
+  nrematches = 2 # Could very
+  nfullrounds = 1 # How many full cycles
+  total_rounds = len(agents)*(len(agents) - 1) * nfullrounds * nrematches
 
-nrematches = 2 # Could very
-nfullrounds = 1 # How many full cycles
-total_rounds = len(agents)*(len(agents) - 1) * nfullrounds * nrematches
-game = Game(total_rounds)
 
-# Play rounds
-while not game.isOver():
-  random.shuffle(agents)
-  for player1, player2 in permutations(agents, 2):
-    log.write("==========\n")
-    for remaining in reversed(range(0, nrematches)):
-      play_round(game, player1, player2, remaining)
+  game = Game(total_rounds)
+  while not game.isOver():
+    random.shuffle(agents)
+    for player1, player2 in permutations(agents, 2):
+      log.write("==========\n")
+      for remaining in reversed(range(0, nrematches)):
+        play_round(game, player1, player2, remaining)
 
 
 max_score = -1
 best = None
 scores = []
+log.write("\n\n==========\n")
 for a in agents:
   log.write(f"O agente '{a.name}' obteve {a.total_amount}\n")
   if a.total_amount > max_score:
