@@ -3,6 +3,7 @@ import numpy as np
 from itertools import permutations
 import simple_opponents
 import your_agent
+import train_agent_5
 
 
 mean = 100
@@ -92,7 +93,8 @@ class Game:
 
 
     def render(self):
-        log.write(f"Rounds played: {self.rounds_played}/{self.total_rounds}\n\n")
+        #log.write(f"Rounds played: {self.rounds_played}/{self.total_rounds}\n\n")
+        pass
 
 class Player:
     def __init__(self, agent):
@@ -106,28 +108,31 @@ class Player:
       self.karma = min(max(self.karma + value, -5), 5)
 
     def render(self, x, y):
-        log.write(f"Name: {self.name}\n")
-        log.write(f"Amount: {self.total_amount:.2f}\n")
+        #log.write(f"Name: {self.name}\n")
+        #log.write(f"Amount: {self.total_amount:.2f}\n")
+        pass
 
     
     def preround_render(self, x, y):
-        log.write(f"Karma: {self.karma}\n")
+        #log.write(f"Karma: {self.karma}\n")
         
-        log.write(f"Name: {self.name}\n")
+        #log.write(f"Name: {self.name}\n")
         
-        log.write((f"Amount: {self.total_amount:.2f}\n"))
+        #log.write((f"Amount: {self.total_amount:.2f}\n"))
+        pass
         
     def render(self, x, y):
-        log.write(f"Karma: {self.karma}\n")
+        #log.write(f"Karma: {self.karma}\n")
    
-        log.write(f"Name: {self.name}\n")
+        #log.write(f"Name: {self.name}\n")
+        pass
 
 
         # Draw decision
-        if self.last_decision == "split":
-            log.write("Split\n")
-        elif self.last_decision == "steal":
-            log.write("Steal\n")
+        #if self.last_decision == "split":
+            #log.write("Split\n")
+        #elif self.last_decision == "steal":
+            #log.write("Steal\n")
 
 
     def decision(self, total_amount, rounds_played, your_karma, his_karma):
@@ -153,7 +158,7 @@ def play_round(game, agent1, agent2, remaining):
   agent2.render(550, 50)
   game.render()
 
-ntrains = 500
+ntrains = 1
 for i in range(ntrains):
   log.close()
   log = open("Log.txt","w")
@@ -162,7 +167,7 @@ for i in range(ntrains):
   agent2 = Player(simple_opponents.Stealer())
   agent3 = Player(simple_opponents.Randy())
   agent4 = Player(simple_opponents.Karmine())
-  agents = [agent1, agent2, agent3, agent4, Player(your_agent.ReinforcementLearningAgent())]
+  agents = [agent1, agent2, agent3, agent4, Player(train_agent_5.ReinforcementLearningAgent())]
 
   nrematches = 2 # Could very
   nfullrounds = 1 # How many full cycles
@@ -181,6 +186,7 @@ for i in range(ntrains):
 max_score = -1
 best = None
 scores = []
+log.write("\n\n==========\n")
 for a in agents:
   log.write(f"O agente '{a.name}' obteve {a.total_amount}\n")
   if a.total_amount > max_score:

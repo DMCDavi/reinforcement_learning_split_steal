@@ -20,7 +20,7 @@ class ReinforcementLearningAgent:
     police = open("police.txt","r")
     for line in police:
       if len(line.split()) > 1:
-        if random.random() < 0.5:
+        if random.random() < 0.2:
           self.actions[line.split()[0]]=line.split()[1]
         else:
           self.actions[line.split()[0]]=random.choice(['0','1'])
