@@ -1,6 +1,6 @@
 import random
 import numpy as np
-from itertools import permutations
+from itertools import combinations
 import simple_opponents
 import your_agent
 import train_agent_1
@@ -112,6 +112,9 @@ class Player:
     def add_karma(self, value):
       self.karma = min(max(self.karma + value, -5), 5)
 
+    def reset_karma(self):
+      self.karma = 0
+
     def render(self, x, y):
         #log.write(f"Name: {self.name}\n")
         #log.write(f"Amount: {self.total_amount:.2f}\n")
@@ -174,6 +177,31 @@ for i in range(ntrains):
   agent2 = Player(simple_opponents.Stealer())
   agent3 = Player(simple_opponents.Randy())
   agent4 = Player(simple_opponents.Karmine())
+  agent5 = Player(simple_opponents.Opportunist())
+  agent6 = Player(simple_opponents.Pretender())
+  agent_tittat = Player(your_agent.ReinforcementLearningAgent())
+
+  # Allgame
+  #agents = [agent1, agent2, agent3, agent4, agent5, agent6, ]
+
+  # Simple
+  #agents = [Player(simple_opponents.Karmine()),  Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), agent_tittat]
+
+  # Difficult 
+  # agents = [Player(your_agent.ReinforcementLearningAgent()), Player(your_agent.ReinforcementLearningAgent()), Player(rl_agent.RLAgent()), Player(your_agent.ReinforcementLearningAgent())]
+
+  # Very difficult
+  # agents = [Player(simple_opponents.Pretender()), Player(simple_opponents.Pretender()), Player(rl_agent.RLAgent()), Player(simple_opponents.Karmine())]
+
+  # Karma-aware
+  # agents = [Player(simple_opponents.Karmine()), Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), Player(simple_opponents.Stealer())]
+
+  # Opportunists
+  # agents = [Player(simple_opponents.Opportunist()),Player(simple_opponents.Opportunist()), Player(rl_agent.RLAgent()), agent_tittat]
+
+  # 3 Karmines
+  # agents = [Player(simple_opponents.Karmine()),  Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), Player(simple_opponents.Karmine())]
+
   #agents = [agent1, agent2, agent3, agent4, Player(train_agent_1.ReinforcementLearningAgent())]
   agents = [Player(train_agent_1.ReinforcementLearningAgent()), Player(train_agent_2.ReinforcementLearningAgent()), 
             Player(train_agent_3.ReinforcementLearningAgent()), Player(train_agent_4.ReinforcementLearningAgent()), 
@@ -181,17 +209,26 @@ for i in range(ntrains):
 
   nrematches = 10 # Could very
   nfullrounds = 50 # How many full cycles
-  total_rounds = len(agents)*(len(agents) - 1) * nfullrounds * nrematches
-
+  total_rounds = int(len(agents)*(len(agents) - 1) * nfullrounds * nrematches / 2)
 
   game = Game(total_rounds)
+
+  from collections import defaultdict
+  matches_played = defaultdict(lambda: 0)
+  # Play rounds
   while not game.isOver():
     random.shuffle(agents)
-    for player1, player2 in permutations(agents, 2):
+    for a in agents:
+      a.reset_karma()
+    
+    for player1, player2 in combinations(agents, 2):
+      matches_played[player1.name] += 1
+      matches_played[player2.name] += 1
       #log.write("==========\n")
       for remaining in reversed(range(0, nrematches)):
         play_round(game, player1, player2, remaining)
 
+  # print(matches_played)
 
   max_score = -1
   best = None
