@@ -2,8 +2,8 @@ import random
 import numpy as np
 from itertools import combinations
 import simple_opponents
-import your_agent
-import train_agent_5
+import gp_agent
+import rl_agent
 
 
 mean = 100
@@ -12,9 +12,37 @@ variance = 10000  # Large variance
 #Create Log file
 log = open("Log.txt","w")
 
+def select_agents(type):
 
-# Game settings
-rounds_to_play = 10
+  splitter = Player(simple_opponents.Splitter())
+  stealer = Player(simple_opponents.Stealer())
+  randy = Player(simple_opponents.Randy())
+  karmine = Player(simple_opponents.Karmine())
+  opportunist = Player(simple_opponents.Opportunist())
+  pretender = Player(simple_opponents.Pretender())
+  train = Player(gp_agent.ReinforcementLearningAgent())
+  rl=Player(rl_agent.RLAgent())
+
+  if type == "Allgame":
+    return [splitter, stealer, randy, karmine, opportunist, pretender, train]
+
+  if type == "Simple":
+    return [karmine,  karmine, rl, train]
+
+  if type == "Difficult":
+    return [train, train, rl, train]
+
+  if type == "Very difficult":
+    return [pretender, pretender, rl, karmine, train]
+
+  if type == "Karma-aware":
+    return [karmine, karmine, rl, stealer]
+
+  if type == "Opportunists":
+    return [opportunist,opportunist, rl, train]
+
+  if type == "3 Karmines":
+    return [karmine,  karmine, karmine, train]
 
 class Game:
     def __init__ (self, total_rounds):
@@ -91,11 +119,6 @@ class Game:
         log.write(f"\nRounds played: {self.rounds_played}/{self.total_rounds}\n")
         log.write(f"Current Amount: ${self.current_amount: .2f}\n")
 
-
-    def render(self):
-        #log.write(f"Rounds played: {self.rounds_played}/{self.total_rounds}\n\n")
-        pass
-
 class Player:
     def __init__(self, agent):
         self.name = agent.get_name()
@@ -110,34 +133,6 @@ class Player:
     def reset_karma(self):
       self.karma = 0
 
-    def render(self, x, y):
-        #log.write(f"Name: {self.name}\n")
-        #log.write(f"Amount: {self.total_amount:.2f}\n")
-        pass
-
-    
-    def preround_render(self, x, y):
-        #log.write(f"Karma: {self.karma}\n")
-        
-        #log.write(f"Name: {self.name}\n")
-        
-        #log.write((f"Amount: {self.total_amount:.2f}\n"))
-        pass
-        
-    def render(self, x, y):
-        #log.write(f"Karma: {self.karma}\n")
-   
-        #log.write(f"Name: {self.name}\n")
-        pass
-
-
-        # Draw decision
-        #if self.last_decision == "split":
-            #log.write("Split\n")
-        #elif self.last_decision == "steal":
-            #log.write("Steal\n")
-
-
     def decision(self, total_amount, rounds_played, your_karma, his_karma):
       self.last_decision = self.agent.decision(total_amount, rounds_played, your_karma, his_karma)
       return self.last_decision
@@ -149,53 +144,17 @@ class Player:
 def play_round(game, agent1, agent2, remaining):
   log.write(f"{agent1.name} vs {agent2.name}\n")
   game.prepare_round()
-  game.preround_render()
-  agent1.preround_render(50, 50)
-  agent2.preround_render(550, 50)        
+  game.preround_render()  
 
   # Play a round
   game.play_round(agent1, agent2, remaining)
-
-  # Render agents    
-  agent1.render(50, 50)
-  agent2.render(550, 50)
-  game.render()
 
 ntrains = 1
 for i in range(ntrains):
   log.close()
   log = open("Log.txt","w")
-  # Create agents
-  agent1 = Player(simple_opponents.Splitter())
-  agent2 = Player(simple_opponents.Stealer())
-  agent3 = Player(simple_opponents.Randy())
-  agent4 = Player(simple_opponents.Karmine())
-  agent5 = Player(simple_opponents.Opportunist())
-  agent6 = Player(simple_opponents.Pretender())
-  agent_tittat = Player(your_agent.ReinforcementLearningAgent())
 
-  # Allgame
-  #agents = [agent1, agent2, agent3, agent4, agent5, agent6, ]
-
-  # Simple
-  #agents = [Player(simple_opponents.Karmine()),  Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), agent_tittat]
-
-  # Difficult 
-  # agents = [Player(your_agent.ReinforcementLearningAgent()), Player(your_agent.ReinforcementLearningAgent()), Player(rl_agent.RLAgent()), Player(your_agent.ReinforcementLearningAgent())]
-
-  # Very difficult
-  # agents = [Player(simple_opponents.Pretender()), Player(simple_opponents.Pretender()), Player(rl_agent.RLAgent()), Player(simple_opponents.Karmine())]
-
-  # Karma-aware
-  # agents = [Player(simple_opponents.Karmine()), Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), Player(simple_opponents.Stealer())]
-
-  # Opportunists
-  # agents = [Player(simple_opponents.Opportunist()),Player(simple_opponents.Opportunist()), Player(rl_agent.RLAgent()), agent_tittat]
-
-  # 3 Karmines
-  # agents = [Player(simple_opponents.Karmine()),  Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), Player(simple_opponents.Karmine())]
-
-  agents = [agent1, agent2, agent3, agent4, Player(your_agent.ReinforcementLearningAgent())]
+  agents = select_agents("Very difficult")
 
   nrematches = 2 # Could very
   nfullrounds = 1 # How many full cycles

@@ -3,7 +3,8 @@ import random
 import numpy as np
 from itertools import combinations
 import simple_opponents
-import your_agent
+import gp_agent
+import rl_agent
 
 # Initialize Pygame
 pygame.init()
@@ -38,8 +39,37 @@ variance = 10000  # Large variance
 # Fonts
 font = pygame.font.SysFont(None, 24)
 
-# Game settings
-rounds_to_play = 10
+def select_agents(type):
+
+  splitter = Player(simple_opponents.Splitter())
+  stealer = Player(simple_opponents.Stealer())
+  randy = Player(simple_opponents.Randy())
+  karmine = Player(simple_opponents.Karmine())
+  opportunist = Player(simple_opponents.Opportunist())
+  pretender = Player(simple_opponents.Pretender())
+  train = Player(gp_agent.ReinforcementLearningAgent())
+  rl=Player(rl_agent.RLAgent())
+
+  if type == "Allgame":
+    return [splitter, stealer, randy, karmine, opportunist, pretender, train]
+
+  if type == "Simple":
+    return [karmine,  karmine, rl, train]
+
+  if type == "Difficult":
+    return [train, train, rl, train]
+
+  if type == "Very difficult":
+    return [pretender, pretender, rl, karmine, train]
+
+  if type == "Karma-aware":
+    return [karmine, karmine, rl, stealer]
+
+  if type == "Opportunists":
+    return [opportunist,opportunist, rl, train]
+
+  if type == "3 Karmines":
+    return [karmine,  karmine, karmine, train]
 
 class Game:
     def __init__ (self, total_rounds):
@@ -235,38 +265,7 @@ def play_round(game, agent1, agent2, remaining):
   for _ in range(4): 
     pygame.time.wait(1000)  
 
-
-# Create two agents
-agent1 = Player(simple_opponents.Splitter())
-agent2 = Player(simple_opponents.Stealer())
-agent3 = Player(simple_opponents.Randy())
-agent4 = Player(simple_opponents.Karmine())
-agent5 = Player(simple_opponents.Opportunist())
-agent6 = Player(simple_opponents.Pretender())
-agent_tittat = Player(your_agent.ReinforcementLearningAgent())
-
-# Allgame
-#agents = [agent1, agent2, agent3, agent4, agent5, agent6, ]
-
-# Simple
-#agents = [Player(simple_opponents.Karmine()),  Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), agent_tittat]
-
-# Difficult 
-# agents = [Player(your_agent.ReinforcementLearningAgent()), Player(your_agent.ReinforcementLearningAgent()), Player(rl_agent.RLAgent()), Player(your_agent.ReinforcementLearningAgent())]
-
-# Very difficult
-# agents = [Player(simple_opponents.Pretender()), Player(simple_opponents.Pretender()), Player(rl_agent.RLAgent()), Player(simple_opponents.Karmine())]
-
-# Karma-aware
-# agents = [Player(simple_opponents.Karmine()), Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), Player(simple_opponents.Stealer())]
-
-# Opportunists
-# agents = [Player(simple_opponents.Opportunist()),Player(simple_opponents.Opportunist()), Player(rl_agent.RLAgent()), agent_tittat]
-
-# 3 Karmines
-# agents = [Player(simple_opponents.Karmine()),  Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), Player(simple_opponents.Karmine())]
-
-agents = [agent1, agent2, agent3, agent4, Player(your_agent.ReinforcementLearningAgent())]
+agents = select_agents("Very difficult")
 
 nrematches = 2 # Could very
 nfullrounds = 1 # How many full cycles

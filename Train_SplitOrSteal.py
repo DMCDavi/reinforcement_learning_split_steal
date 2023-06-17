@@ -2,12 +2,7 @@ import random
 import numpy as np
 from itertools import combinations
 import simple_opponents
-import your_agent
-import train_agent_1
-import train_agent_2
-import train_agent_3
-import train_agent_4
-import train_agent_5
+import gp_agent
 import rl_agent
 
 
@@ -29,7 +24,7 @@ def select_agents(type):
   karmine = Player(simple_opponents.Karmine())
   opportunist = Player(simple_opponents.Opportunist())
   pretender = Player(simple_opponents.Pretender())
-  train = Player(train_agent_1.ReinforcementLearningAgent())
+  train = Player(gp_agent.ReinforcementLearningAgent())
   rl=Player(rl_agent.RLAgent())
 
   if type == "Allgame":
