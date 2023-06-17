@@ -1,9 +1,11 @@
 import random
 
 class ReinforcementLearningAgent:
-  def __init__(self):
+  def __init__(self, id):
+    # Identificador do agente
+    self.id = id
     # Chance percentual do agente tomar a ação descrita na política
-    self.epsilon = 0.9
+    self.epsilon = 0.8
     # Recompensa do agente
     self.score = 0
     # Quantidade total de dinheiro que o agente ganhou
@@ -13,7 +15,7 @@ class ReinforcementLearningAgent:
     # Flag indicando se essa seria a ultima rodada
     self.last_round = False
     # Nome do arquivo da política do agente
-    self.police = "gp_police.txt"
+    self.police = f"gp_police_{id}.txt"
     # Dicionário com a política do agente
     self.actions = {}
     # Recompensa da última melhor política
@@ -83,7 +85,7 @@ class ReinforcementLearningAgent:
 
   # Retona o nome do agente
   def get_name(self):
-    return "GP_agent"
+    return f"GP_agent_{self.id}"
   
   # Função que escolhe qual ação será tomada
   def decision(self, amount, rounds_left, your_karma, his_karma):

@@ -20,7 +20,9 @@ def select_agents(type):
   karmine = Player(simple_opponents.Karmine())
   opportunist = Player(simple_opponents.Opportunist())
   pretender = Player(simple_opponents.Pretender())
-  train = Player(gp_agent.ReinforcementLearningAgent())
+  train = Player(gp_agent.ReinforcementLearningAgent(1))
+  train_2 = Player(gp_agent.ReinforcementLearningAgent(2))
+  train_3 = Player(gp_agent.ReinforcementLearningAgent(3))
   rl=Player(rl_agent.RLAgent())
 
   if type == "Allgame":
@@ -30,13 +32,13 @@ def select_agents(type):
     return [karmine,  karmine, rl, train]
 
   if type == "Difficult":
-    return [train, train, rl, train]
+    return [train_2, train_3, rl, train]
 
   if type == "Very difficult":
     return [pretender, pretender, rl, karmine, train]
 
   if type == "Karma-aware":
-    return [karmine, karmine, rl, stealer]
+    return [karmine, karmine, rl, stealer, train]
 
   if type == "Opportunists":
     return [opportunist,opportunist, rl, train]
