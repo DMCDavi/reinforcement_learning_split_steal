@@ -12,6 +12,11 @@ def always_random_callback(total_amount, rounds_left, your_karma, his_karma):
 def always_his_karma_callback(total_amount, rounds_left, your_karma, his_karma):
     return "split" if his_karma >= 0 else "steal" 
 
+def always_steal_on_last_round_callback(total_amount, rounds_left, your_karma, his_karma):
+    return "steal" if rounds_left <= 0 else "split" 
+
+def always_karma_positive_callback(total_amount, rounds_left, your_karma, his_karma):
+    return "steal" if your_karma >= 1 else "split" 
 
 
 class StaticAgent:
@@ -44,7 +49,12 @@ class Stealer(StaticAgent):
 
 class Karmine(StaticAgent):
   def __init__(self):
-    StaticAgent.__init__(self, "Karmine", always_his_karma_callback)    
-
-
-
+    StaticAgent.__init__(self, "Karmine", always_his_karma_callback)  
+    
+class Opportunist(StaticAgent):
+  def __init__(self):
+    StaticAgent.__init__(self, "Opportunist", always_steal_on_last_round_callback)    
+  
+class Pretender(StaticAgent):
+  def __init__(self):
+    StaticAgent.__init__(self, "Pretender", always_karma_positive_callback)    
