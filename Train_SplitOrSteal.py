@@ -2,12 +2,7 @@ import random
 import numpy as np
 from itertools import combinations
 import simple_opponents
-import your_agent
-import train_agent_1
-import train_agent_2
-import train_agent_3
-import train_agent_4
-import train_agent_5
+import gp_agent
 import rl_agent
 
 
@@ -16,10 +11,6 @@ variance = 10000  # Large variance
 
 #Create Log file
 log = open("Log.txt","w")
-df1 = open("score.txt", "w")
-df2 = open("reward.txt", "w")
-df3 = open("score_all.txt", "w")
-
 
 def select_agents(type):
 
@@ -29,7 +20,9 @@ def select_agents(type):
   karmine = Player(simple_opponents.Karmine())
   opportunist = Player(simple_opponents.Opportunist())
   pretender = Player(simple_opponents.Pretender())
-  train = Player(train_agent_1.ReinforcementLearningAgent())
+  train = Player(gp_agent.ReinforcementLearningAgent(1))
+  train_2 = Player(gp_agent.ReinforcementLearningAgent(2))
+  train_3 = Player(gp_agent.ReinforcementLearningAgent(3))
   rl=Player(rl_agent.RLAgent())
 
   if type == "Allgame":
@@ -39,13 +32,13 @@ def select_agents(type):
     return [karmine,  karmine, rl, train]
 
   if type == "Difficult":
-    return [train, train, rl, train]
+    return [train_2, train_3, rl, train]
 
   if type == "Very difficult":
     return [pretender, pretender, rl, karmine, train]
 
   if type == "Karma-aware":
-    return [karmine, karmine, rl, stealer]
+    return [karmine, karmine, rl, stealer, train]
 
   if type == "Opportunists":
     return [opportunist,opportunist, rl, train]
@@ -119,9 +112,6 @@ class Game:
         else:
           right_agent.add_karma(+1)            
                       
-
-
-
 class Player:
     def __init__(self, agent):
         self.name = agent.get_name()
@@ -149,54 +139,61 @@ def play_round(game, agent1, agent2, remaining):
   # Play a round
   game.play_round(agent1, agent2, remaining)
 
-
-ntrains = 100
+ntrains = 5000
 log = open("Log.txt","w")
-for i in range(ntrains):
-  log.close()
-  log = open("Log.txt","a")
-  # Create agents
 
-  agents = select_agents("Very difficult")
+game_types = ["Allgame","Simple","Difficult","Very difficult","Karma-aware","Opportunists","3 Karmines"]
 
-  nrematches = 10 # Could very
-  nfullrounds = 50 # How many full cycles
-  total_rounds = int(len(agents)*(len(agents) - 1) * nfullrounds * nrematches / 2)
+for type in game_types:
+  df1 = open(f"score_{type}.txt", "w")
+  df2 = open(f"reward_{type}.txt", "w")
+  df3 = open(f"score_all_{type}.txt", "w")
 
-  game = Game(total_rounds)
+  for i in range(ntrains):
+    log.close()
+    log = open("Log.txt","a")
 
-  from collections import defaultdict
-  matches_played = defaultdict(lambda: 0)
-  # Play rounds
-  while not game.isOver():
-    random.shuffle(agents)
+    # Create agents
+    agents = select_agents(type)
+
+    nrematches = 10 # Could very
+    nfullrounds = 50 # How many full cycles
+    total_rounds = int(len(agents)*(len(agents) - 1) * nfullrounds * nrematches / 2)
+
+    game = Game(total_rounds)
+
+    from collections import defaultdict
+    matches_played = defaultdict(lambda: 0)
+
+    # Play rounds
+    while not game.isOver():
+      random.shuffle(agents)
+      for a in agents:
+        a.reset_karma()
+      
+      for player1, player2 in combinations(agents, 2):
+        matches_played[player1.name] += 1
+        matches_played[player2.name] += 1
+        for remaining in reversed(range(0, nrematches)):
+          play_round(game, player1, player2, remaining)
+
+    max_score = -1
+    best = None
+    scores = []
     for a in agents:
-      a.reset_karma()
-    
-    for player1, player2 in combinations(agents, 2):
-      matches_played[player1.name] += 1
-      matches_played[player2.name] += 1
-      #log.write("==========\n")
-      for remaining in reversed(range(0, nrematches)):
-        play_round(game, player1, player2, remaining)
-
-  # print(matches_played)
-
-  max_score = -1
-  best = None
-  scores = []
-  for a in agents:
-    log.write(f"O agente '{a.name}' obteve {a.total_amount}\n")
-    df3.write(f"{i} {a.name} {a.total_amount}\n")
-    if a.total_amount > max_score:
-      best = a
-      max_score = a.total_amount
-    if a.name == "GP_agent":
-      df1.write(f"{i} {a.name} {a.total_amount}\n")
-      df2.write(f"{i} {a.name} {a.agent.score}\n")
-      if a.agent.score >= a.agent.old_score:
-        a.agent.replace_police()
-  log.write(f"Vencedor: {best.name}\n")
-  log.write(f"Score: {max_score}\n\n\n")
-
+      log.write(f"O agente '{a.name}' obteve {a.total_amount}\n")
+      df3.write(f"{i} {a.name} {a.total_amount}\n")
+      if a.total_amount > max_score:
+        best = a
+        max_score = a.total_amount
+      if "GP_agent" in a.name:
+        df1.write(f"{i} {a.name} {a.total_amount}\n")
+        df2.write(f"{i} {a.name} {a.agent.score}\n")
+        if a.agent.score >= a.agent.old_score:
+          a.agent.replace_police()
+    log.write(f"Vencedor: {best.name}\n")
+    log.write(f"Score: {max_score}\n\n\n")  
   
+  for a in agents:
+     if "GP_agent" in a.name:
+        a.agent.reset_police()
