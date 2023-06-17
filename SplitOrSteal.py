@@ -1,7 +1,7 @@
 import pygame
 import random
 import numpy as np
-from itertools import permutations
+from itertools import combinations
 import simple_opponents
 import your_agent
 
@@ -48,7 +48,7 @@ class Game:
         self.current_amount = 0 
         
     def isOver(self):
-        return self.rounds_played >= self.total_rounds;    
+        return self.rounds_played >= self.total_rounds 
         
     def prepare_round(self):
         # Generate random values for total amount and rounds played
@@ -79,7 +79,7 @@ class Game:
             right_reward = 0   
         elif right_decision == 'steal':
             right_reward = self.current_amount 
-            left_reward = 0;
+            left_reward = 0
             
         print(f"Agent {left_agent.name} won {left_reward:.2f}"
               f" vs Agent {right_agent.name} won {right_reward:.2f}")            
@@ -136,6 +136,9 @@ class Player:
         
     def add_karma(self, value):
       self.karma = min(max(self.karma + value, -5), 5)
+
+    def reset_karma(self):
+      self.karma = 0
 
     def render(self, x, y):
         # Draw background rectangle
@@ -201,7 +204,7 @@ def play_round(game, agent1, agent2, remaining):
   screen.fill(BLACK)
   screen.blit(background_image, (0, 0))
   game.prepare_round()
-  game.preround_render();
+  game.preround_render()
   agent1.preround_render(50, 50)
   agent2.preround_render(550, 50)        
 
@@ -225,7 +228,7 @@ def play_round(game, agent1, agent2, remaining):
   screen.blit(background_image, (0, 0))    
   agent1.render(50, 50)
   agent2.render(550, 50)
-  game.render();
+  game.render()
 
  # Update the screen
   pygame.display.flip()
@@ -238,21 +241,54 @@ agent1 = Player(simple_opponents.Splitter())
 agent2 = Player(simple_opponents.Stealer())
 agent3 = Player(simple_opponents.Randy())
 agent4 = Player(simple_opponents.Karmine())
+agent5 = Player(simple_opponents.Opportunist())
+agent6 = Player(simple_opponents.Pretender())
+agent_tittat = Player(your_agent.ReinforcementLearningAgent())
+
+# Allgame
+#agents = [agent1, agent2, agent3, agent4, agent5, agent6, ]
+
+# Simple
+#agents = [Player(simple_opponents.Karmine()),  Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), agent_tittat]
+
+# Difficult 
+# agents = [Player(your_agent.ReinforcementLearningAgent()), Player(your_agent.ReinforcementLearningAgent()), Player(rl_agent.RLAgent()), Player(your_agent.ReinforcementLearningAgent())]
+
+# Very difficult
+# agents = [Player(simple_opponents.Pretender()), Player(simple_opponents.Pretender()), Player(rl_agent.RLAgent()), Player(simple_opponents.Karmine())]
+
+# Karma-aware
+# agents = [Player(simple_opponents.Karmine()), Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), Player(simple_opponents.Stealer())]
+
+# Opportunists
+# agents = [Player(simple_opponents.Opportunist()),Player(simple_opponents.Opportunist()), Player(rl_agent.RLAgent()), agent_tittat]
+
+# 3 Karmines
+# agents = [Player(simple_opponents.Karmine()),  Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), Player(simple_opponents.Karmine())]
+
 agents = [agent1, agent2, agent3, agent4, Player(your_agent.ReinforcementLearningAgent())]
 
 nrematches = 2 # Could very
 nfullrounds = 1 # How many full cycles
-total_rounds = len(agents)*(len(agents) - 1) * nfullrounds * nrematches
+total_rounds = int(len(agents)*(len(agents) - 1) * nfullrounds * nrematches / 2)
 game = Game(total_rounds)
 
+from collections import defaultdict
+matches_played = defaultdict(lambda: 0)
 # Play rounds
 while not game.isOver():
   random.shuffle(agents)
-  for player1, player2 in permutations(agents, 2):
+  for a in agents:
+    a.reset_karma()
+  
+  for player1, player2 in combinations(agents, 2):
+    matches_played[player1.name] += 1
+    matches_played[player2.name] += 1
     print("==========")
     for remaining in reversed(range(0, nrematches)): 
       play_round(game, player1, player2, remaining)
 
+# print(matches_played)
 
 max_score = -1
 best = None
