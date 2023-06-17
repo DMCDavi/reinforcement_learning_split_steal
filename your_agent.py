@@ -68,9 +68,9 @@ class ReinforcementLearningAgent:
     elif total_possible == reward*2:
       self.score += 1
     self.score_total += reward
-    if self.score >= self.old_score:
-      self.replace_police()
-      print(self.score)
+    #if self.score >= self.old_score:
+      #self.replace_police()
+      #print(self.score)
     if self.last_round:
       self.last_opponent_action = None
     else:   

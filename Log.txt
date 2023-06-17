@@ -1,270 +1,900 @@
-==========
-Splitter vs Randy
-
-Rounds played: 0/40
-Current Amount: $ 111.68
-Agent Splitter=split vs Agent Randy=split
-Agent Splitter won 55.84 vs Agent Randy won 55.84
-Splitter vs Randy
-
-Rounds played: 1/40
-Current Amount: $ 253.16
-Agent Splitter=split vs Agent Randy=split
-Agent Splitter won 126.58 vs Agent Randy won 126.58
-==========
-Splitter vs Karmine
-
-Rounds played: 2/40
-Current Amount: $ 100.00
-Agent Splitter=split vs Agent Karmine=split
-Agent Splitter won 50.00 vs Agent Karmine won 50.00
-Splitter vs Karmine
-
-Rounds played: 3/40
-Current Amount: $ 110.37
-Agent Splitter=split vs Agent Karmine=split
-Agent Splitter won 55.18 vs Agent Karmine won 55.18
-==========
-Splitter vs Train_5
-
-Rounds played: 4/40
-Current Amount: $ 272.63
-Agent Splitter=split vs Agent Train_5=split
-Agent Splitter won 136.31 vs Agent Train_5 won 136.31
-Splitter vs Train_5
-
-Rounds played: 5/40
-Current Amount: $ 100.00
-Agent Splitter=split vs Agent Train_5=split
-Agent Splitter won 50.00 vs Agent Train_5 won 50.00
-==========
-Splitter vs Stealer
-
-Rounds played: 6/40
-Current Amount: $ 195.14
-Agent Splitter=split vs Agent Stealer=steal
-Agent Splitter won 0.00 vs Agent Stealer won 195.14
-Splitter vs Stealer
-
-Rounds played: 7/40
-Current Amount: $ 169.30
-Agent Splitter=split vs Agent Stealer=steal
-Agent Splitter won 0.00 vs Agent Stealer won 169.30
-==========
-Randy vs Splitter
-
-Rounds played: 8/40
-Current Amount: $ 114.45
-Agent Randy=steal vs Agent Splitter=split
-Agent Randy won 114.45 vs Agent Splitter won 0.00
-Randy vs Splitter
-
-Rounds played: 9/40
-Current Amount: $ 100.00
-Agent Randy=split vs Agent Splitter=split
-Agent Randy won 50.00 vs Agent Splitter won 50.00
-==========
-Randy vs Karmine
-
-Rounds played: 10/40
-Current Amount: $ 100.00
-Agent Randy=split vs Agent Karmine=split
-Agent Randy won 50.00 vs Agent Karmine won 50.00
-Randy vs Karmine
-
-Rounds played: 11/40
-Current Amount: $ 100.00
-Agent Randy=split vs Agent Karmine=split
-Agent Randy won 50.00 vs Agent Karmine won 50.00
-==========
-Randy vs Train_5
-
-Rounds played: 12/40
-Current Amount: $ 224.43
-Agent Randy=split vs Agent Train_5=steal
-Agent Randy won 0.00 vs Agent Train_5 won 224.43
-Randy vs Train_5
-
-Rounds played: 13/40
-Current Amount: $ 148.93
-Agent Randy=split vs Agent Train_5=split
-Agent Randy won 74.47 vs Agent Train_5 won 74.47
-==========
-Randy vs Stealer
-
-Rounds played: 14/40
-Current Amount: $ 145.31
-Agent Randy=steal vs Agent Stealer=steal
-Agent Randy won 0.00 vs Agent Stealer won 0.00
-Randy vs Stealer
-
-Rounds played: 15/40
-Current Amount: $ 178.52
-Agent Randy=split vs Agent Stealer=steal
-Agent Randy won 0.00 vs Agent Stealer won 178.52
-==========
-Karmine vs Splitter
-
-Rounds played: 16/40
-Current Amount: $ 100.00
-Agent Karmine=split vs Agent Splitter=split
-Agent Karmine won 50.00 vs Agent Splitter won 50.00
-Karmine vs Splitter
-
-Rounds played: 17/40
-Current Amount: $ 119.65
-Agent Karmine=split vs Agent Splitter=split
-Agent Karmine won 59.82 vs Agent Splitter won 59.82
-==========
-Karmine vs Randy
-
-Rounds played: 18/40
-Current Amount: $ 427.38
-Agent Karmine=split vs Agent Randy=steal
-Agent Karmine won 0.00 vs Agent Randy won 427.38
-Karmine vs Randy
-
-Rounds played: 19/40
-Current Amount: $ 100.00
-Agent Karmine=split vs Agent Randy=steal
-Agent Karmine won 0.00 vs Agent Randy won 100.00
-==========
-Karmine vs Train_5
-
-Rounds played: 20/40
-Current Amount: $ 161.65
-Agent Karmine=split vs Agent Train_5=split
-Agent Karmine won 80.82 vs Agent Train_5 won 80.82
-Karmine vs Train_5
-
-Rounds played: 21/40
-Current Amount: $ 100.00
-Agent Karmine=split vs Agent Train_5=steal
-Agent Karmine won 0.00 vs Agent Train_5 won 100.00
-==========
-Karmine vs Stealer
-
-Rounds played: 22/40
-Current Amount: $ 100.00
-Agent Karmine=steal vs Agent Stealer=steal
-Agent Karmine won 0.00 vs Agent Stealer won 0.00
-Karmine vs Stealer
-
-Rounds played: 23/40
-Current Amount: $ 140.30
-Agent Karmine=steal vs Agent Stealer=steal
-Agent Karmine won 0.00 vs Agent Stealer won 0.00
-==========
-Train_5 vs Splitter
-
-Rounds played: 24/40
-Current Amount: $ 113.57
-Agent Train_5=split vs Agent Splitter=split
-Agent Train_5 won 56.78 vs Agent Splitter won 56.78
-Train_5 vs Splitter
-
-Rounds played: 25/40
-Current Amount: $ 294.43
-Agent Train_5=steal vs Agent Splitter=split
-Agent Train_5 won 294.43 vs Agent Splitter won 0.00
-==========
-Train_5 vs Randy
-
-Rounds played: 26/40
-Current Amount: $ 100.00
-Agent Train_5=steal vs Agent Randy=steal
-Agent Train_5 won 0.00 vs Agent Randy won 0.00
-Train_5 vs Randy
-
-Rounds played: 27/40
-Current Amount: $ 142.38
-Agent Train_5=split vs Agent Randy=steal
-Agent Train_5 won 0.00 vs Agent Randy won 142.38
-==========
-Train_5 vs Karmine
-
-Rounds played: 28/40
-Current Amount: $ 263.36
-Agent Train_5=steal vs Agent Karmine=split
-Agent Train_5 won 263.36 vs Agent Karmine won 0.00
-Train_5 vs Karmine
-
-Rounds played: 29/40
-Current Amount: $ 100.00
-Agent Train_5=steal vs Agent Karmine=split
-Agent Train_5 won 100.00 vs Agent Karmine won 0.00
-==========
-Train_5 vs Stealer
-
-Rounds played: 30/40
-Current Amount: $ 100.00
-Agent Train_5=steal vs Agent Stealer=steal
-Agent Train_5 won 0.00 vs Agent Stealer won 0.00
-Train_5 vs Stealer
-
-Rounds played: 31/40
-Current Amount: $ 100.00
-Agent Train_5=steal vs Agent Stealer=steal
-Agent Train_5 won 0.00 vs Agent Stealer won 0.00
-==========
-Stealer vs Splitter
-
-Rounds played: 32/40
-Current Amount: $ 169.22
-Agent Stealer=steal vs Agent Splitter=split
-Agent Stealer won 169.22 vs Agent Splitter won 0.00
-Stealer vs Splitter
-
-Rounds played: 33/40
-Current Amount: $ 100.00
-Agent Stealer=steal vs Agent Splitter=split
-Agent Stealer won 100.00 vs Agent Splitter won 0.00
-==========
-Stealer vs Randy
-
-Rounds played: 34/40
-Current Amount: $ 100.00
-Agent Stealer=steal vs Agent Randy=steal
-Agent Stealer won 0.00 vs Agent Randy won 0.00
-Stealer vs Randy
-
-Rounds played: 35/40
-Current Amount: $ 100.00
-Agent Stealer=steal vs Agent Randy=steal
-Agent Stealer won 0.00 vs Agent Randy won 0.00
-==========
-Stealer vs Karmine
-
-Rounds played: 36/40
-Current Amount: $ 277.39
-Agent Stealer=steal vs Agent Karmine=steal
-Agent Stealer won 0.00 vs Agent Karmine won 0.00
-Stealer vs Karmine
-
-Rounds played: 37/40
-Current Amount: $ 100.00
-Agent Stealer=steal vs Agent Karmine=steal
-Agent Stealer won 0.00 vs Agent Karmine won 0.00
-==========
-Stealer vs Train_5
-
-Rounds played: 38/40
-Current Amount: $ 192.29
-Agent Stealer=steal vs Agent Train_5=split
-Agent Stealer won 192.29 vs Agent Train_5 won 0.00
-Stealer vs Train_5
-
-Rounds played: 39/40
-Current Amount: $ 175.29
-Agent Stealer=steal vs Agent Train_5=steal
-Agent Stealer won 0.00 vs Agent Train_5 won 0.00
+O agente 'Karmine' obteve 68263.53232621726
+O agente 'SimpleRL' obteve 121978.4884533852
+O agente 'GP_agent' obteve 121799.59021270787
+O agente 'Pretender' obteve 262614.80797778885
+O agente 'Pretender' obteve 262614.80797778885
+Vencedor: Pretender
+Score: 262614.80797778885
 
 
-==========
-O agente 'Splitter' obteve 690.5287800530209
-O agente 'Randy' obteve 1191.096403905544
-O agente 'Karmine' obteve 395.833190930007
-O agente 'Train_5' obteve 1380.6139507121006
-O agente 'Stealer' obteve 1004.4737174117286
-Vencedor: Train_5
-Score: 1380.6139507121006
+O agente 'Karmine' obteve 79696.115941355
+O agente 'Pretender' obteve 238865.79775551538
+O agente 'SimpleRL' obteve 120592.05138863661
+O agente 'Pretender' obteve 238865.79775551538
+O agente 'GP_agent' obteve 115613.07843519915
+Vencedor: Pretender
+Score: 238865.79775551538
+
+
+O agente 'Karmine' obteve 76468.99547605692
+O agente 'GP_agent' obteve 116617.94479373434
+O agente 'Pretender' obteve 248626.70011406214
+O agente 'Pretender' obteve 248626.70011406214
+O agente 'SimpleRL' obteve 119961.45628364067
+Vencedor: Pretender
+Score: 248626.70011406214
+
+
+O agente 'SimpleRL' obteve 118444.10987838649
+O agente 'Karmine' obteve 81028.89576797036
+O agente 'Pretender' obteve 250454.30799290523
+O agente 'GP_agent' obteve 126613.12595535666
+O agente 'Pretender' obteve 250454.30799290523
+Vencedor: Pretender
+Score: 250454.30799290523
+
+
+O agente 'Karmine' obteve 76513.83581669143
+O agente 'Pretender' obteve 244086.6413865013
+O agente 'Pretender' obteve 244086.6413865013
+O agente 'SimpleRL' obteve 124083.0296882971
+O agente 'GP_agent' obteve 127200.23080045103
+Vencedor: Pretender
+Score: 244086.6413865013
+
+
+O agente 'SimpleRL' obteve 124051.1625258241
+O agente 'Pretender' obteve 250433.89560950582
+O agente 'Pretender' obteve 250433.89560950582
+O agente 'Karmine' obteve 72965.75136127978
+O agente 'GP_agent' obteve 131043.46402095846
+Vencedor: Pretender
+Score: 250433.89560950582
+
+
+O agente 'Karmine' obteve 80317.39449907579
+O agente 'Pretender' obteve 238243.91373066147
+O agente 'GP_agent' obteve 129079.36023187055
+O agente 'SimpleRL' obteve 117963.18716074724
+O agente 'Pretender' obteve 238243.91373066147
+Vencedor: Pretender
+Score: 238243.91373066147
+
+
+O agente 'SimpleRL' obteve 125076.70756793898
+O agente 'GP_agent' obteve 124681.22317560273
+O agente 'Pretender' obteve 247732.3307768587
+O agente 'Pretender' obteve 247732.3307768587
+O agente 'Karmine' obteve 80686.24925360526
+Vencedor: Pretender
+Score: 247732.3307768587
+
+
+O agente 'Karmine' obteve 77575.93980155457
+O agente 'Pretender' obteve 230549.38506180173
+O agente 'Pretender' obteve 230549.38506180173
+O agente 'GP_agent' obteve 116635.33849494034
+O agente 'SimpleRL' obteve 104681.4863417159
+Vencedor: Pretender
+Score: 230549.38506180173
+
+
+O agente 'GP_agent' obteve 126203.18907883548
+O agente 'SimpleRL' obteve 120507.45393611239
+O agente 'Pretender' obteve 247577.83926194545
+O agente 'Pretender' obteve 247577.83926194545
+O agente 'Karmine' obteve 84046.60670257879
+Vencedor: Pretender
+Score: 247577.83926194545
+
+
+O agente 'GP_agent' obteve 122207.2992842959
+O agente 'SimpleRL' obteve 121652.8901141862
+O agente 'Karmine' obteve 80801.24033497325
+O agente 'Pretender' obteve 239067.71677373745
+O agente 'Pretender' obteve 239067.71677373745
+Vencedor: Pretender
+Score: 239067.71677373745
+
+
+O agente 'Pretender' obteve 209571.78854693763
+O agente 'SimpleRL' obteve 110651.2708401116
+O agente 'Karmine' obteve 68397.05624673031
+O agente 'Pretender' obteve 209571.78854693763
+O agente 'GP_agent' obteve 110609.83541855142
+Vencedor: Pretender
+Score: 209571.78854693763
+
+
+O agente 'Pretender' obteve 229099.55115161458
+O agente 'SimpleRL' obteve 103617.54175976958
+O agente 'GP_agent' obteve 106781.98952000309
+O agente 'Pretender' obteve 229099.55115161458
+O agente 'Karmine' obteve 77884.86716159368
+Vencedor: Pretender
+Score: 229099.55115161458
+
+
+O agente 'SimpleRL' obteve 125234.0109126055
+O agente 'Karmine' obteve 87286.78260321799
+O agente 'Pretender' obteve 239774.29231175044
+O agente 'Pretender' obteve 239774.29231175044
+O agente 'GP_agent' obteve 113743.85758007545
+Vencedor: Pretender
+Score: 239774.29231175044
+
+
+O agente 'GP_agent' obteve 117428.4976863519
+O agente 'Karmine' obteve 80287.55633989799
+O agente 'Pretender' obteve 242766.02433873224
+O agente 'Pretender' obteve 242766.02433873224
+O agente 'SimpleRL' obteve 114213.33630101381
+Vencedor: Pretender
+Score: 242766.02433873224
+
+
+O agente 'Pretender' obteve 212124.3380850542
+O agente 'Karmine' obteve 70918.07020936886
+O agente 'Pretender' obteve 212124.3380850542
+O agente 'GP_agent' obteve 110632.88347836271
+O agente 'SimpleRL' obteve 106173.08336997703
+Vencedor: Pretender
+Score: 212124.3380850542
+
+
+O agente 'Karmine' obteve 78283.45360030586
+O agente 'SimpleRL' obteve 116447.06402162032
+O agente 'Pretender' obteve 229037.07362732512
+O agente 'GP_agent' obteve 117787.54446756374
+O agente 'Pretender' obteve 229037.07362732512
+Vencedor: Pretender
+Score: 229037.07362732512
+
+
+O agente 'Karmine' obteve 78113.7746675591
+O agente 'Pretender' obteve 238878.50717784898
+O agente 'SimpleRL' obteve 121507.65225879589
+O agente 'Pretender' obteve 238878.50717784898
+O agente 'GP_agent' obteve 121881.95753130461
+Vencedor: Pretender
+Score: 238878.50717784898
+
+
+O agente 'Pretender' obteve 226939.79702678995
+O agente 'Pretender' obteve 226939.79702678995
+O agente 'Karmine' obteve 77947.10835203095
+O agente 'SimpleRL' obteve 105579.94174311036
+O agente 'GP_agent' obteve 111977.7980477189
+Vencedor: Pretender
+Score: 226939.79702678995
+
+
+O agente 'SimpleRL' obteve 94793.97850237436
+O agente 'Pretender' obteve 223051.1559183792
+O agente 'Pretender' obteve 223051.1559183792
+O agente 'Karmine' obteve 69185.61588006279
+O agente 'GP_agent' obteve 114181.49273525429
+Vencedor: Pretender
+Score: 223051.1559183792
+
+
+O agente 'Pretender' obteve 236896.13629540819
+O agente 'Karmine' obteve 84117.34106415036
+O agente 'Pretender' obteve 236896.13629540819
+O agente 'GP_agent' obteve 128849.11123588312
+O agente 'SimpleRL' obteve 128659.01945557412
+Vencedor: Pretender
+Score: 236896.13629540819
+
+
+O agente 'SimpleRL' obteve 131915.9308419348
+O agente 'Pretender' obteve 247235.22013189743
+O agente 'Karmine' obteve 80205.75828830716
+O agente 'Pretender' obteve 247235.22013189743
+O agente 'GP_agent' obteve 127960.76075421151
+Vencedor: Pretender
+Score: 247235.22013189743
+
+
+O agente 'Pretender' obteve 238593.72495487024
+O agente 'SimpleRL' obteve 123653.18498792431
+O agente 'GP_agent' obteve 109515.58828724231
+O agente 'Karmine' obteve 84859.5433962494
+O agente 'Pretender' obteve 238593.72495487024
+Vencedor: Pretender
+Score: 238593.72495487024
+
+
+O agente 'GP_agent' obteve 125253.6789540011
+O agente 'Karmine' obteve 80349.04586263812
+O agente 'Pretender' obteve 244343.768150221
+O agente 'Pretender' obteve 244343.768150221
+O agente 'SimpleRL' obteve 124118.26859169053
+Vencedor: Pretender
+Score: 244343.768150221
+
+
+O agente 'Pretender' obteve 221881.37469508487
+O agente 'Pretender' obteve 221881.37469508487
+O agente 'Karmine' obteve 65045.28834424308
+O agente 'GP_agent' obteve 102317.06782298668
+O agente 'SimpleRL' obteve 94869.27504720568
+Vencedor: Pretender
+Score: 221881.37469508487
+
+
+O agente 'GP_agent' obteve 126476.01874479053
+O agente 'Karmine' obteve 88051.19742490728
+O agente 'Pretender' obteve 238167.14583518181
+O agente 'Pretender' obteve 238167.14583518181
+O agente 'SimpleRL' obteve 119995.41788618863
+Vencedor: Pretender
+Score: 238167.14583518181
+
+
+O agente 'Pretender' obteve 240139.27028456278
+O agente 'Karmine' obteve 90128.72376252116
+O agente 'Pretender' obteve 240139.27028456278
+O agente 'GP_agent' obteve 105827.04056647101
+O agente 'SimpleRL' obteve 121126.5271697188
+Vencedor: Pretender
+Score: 240139.27028456278
+
+
+O agente 'GP_agent' obteve 112299.127346761
+O agente 'Pretender' obteve 207115.9691654466
+O agente 'SimpleRL' obteve 100597.82264937233
+O agente 'Karmine' obteve 68415.59386661707
+O agente 'Pretender' obteve 207115.9691654466
+Vencedor: Pretender
+Score: 207115.9691654466
+
+
+O agente 'SimpleRL' obteve 133860.53586261466
+O agente 'Pretender' obteve 242716.37822135267
+O agente 'GP_agent' obteve 120788.56636626557
+O agente 'Pretender' obteve 242716.37822135267
+O agente 'Karmine' obteve 80846.99253451846
+Vencedor: Pretender
+Score: 242716.37822135267
+
+
+O agente 'Pretender' obteve 245081.40986372274
+O agente 'Pretender' obteve 245081.40986372274
+O agente 'SimpleRL' obteve 120000.21765245809
+O agente 'Karmine' obteve 82599.50895325655
+O agente 'GP_agent' obteve 134468.87643824064
+Vencedor: Pretender
+Score: 245081.40986372274
+
+
+O agente 'Pretender' obteve 230162.0912514578
+O agente 'GP_agent' obteve 121992.68406471377
+O agente 'SimpleRL' obteve 119023.87558224416
+O agente 'Karmine' obteve 82791.50708869348
+O agente 'Pretender' obteve 230162.0912514578
+Vencedor: Pretender
+Score: 230162.0912514578
+
+
+O agente 'Pretender' obteve 235234.19603453245
+O agente 'GP_agent' obteve 123442.67540350377
+O agente 'Karmine' obteve 79990.04567585024
+O agente 'SimpleRL' obteve 122529.57911709386
+O agente 'Pretender' obteve 235234.19603453245
+Vencedor: Pretender
+Score: 235234.19603453245
+
+
+O agente 'Karmine' obteve 75938.67322424892
+O agente 'GP_agent' obteve 116020.28848176787
+O agente 'SimpleRL' obteve 125010.65123974973
+O agente 'Pretender' obteve 232842.21084619162
+O agente 'Pretender' obteve 232842.21084619162
+Vencedor: Pretender
+Score: 232842.21084619162
+
+
+O agente 'Karmine' obteve 80672.30600303627
+O agente 'Pretender' obteve 251272.45345718466
+O agente 'SimpleRL' obteve 128030.66750310834
+O agente 'GP_agent' obteve 110268.86368075627
+O agente 'Pretender' obteve 251272.45345718466
+Vencedor: Pretender
+Score: 251272.45345718466
+
+
+O agente 'SimpleRL' obteve 124194.56642807524
+O agente 'GP_agent' obteve 130939.75151632358
+O agente 'Pretender' obteve 247868.87543835817
+O agente 'Pretender' obteve 247868.87543835817
+O agente 'Karmine' obteve 81074.42914501442
+Vencedor: Pretender
+Score: 247868.87543835817
+
+
+O agente 'SimpleRL' obteve 125288.55394466108
+O agente 'Pretender' obteve 246742.2845988894
+O agente 'GP_agent' obteve 115211.86447641712
+O agente 'Karmine' obteve 79265.48761794304
+O agente 'Pretender' obteve 246742.2845988894
+Vencedor: Pretender
+Score: 246742.2845988894
+
+
+O agente 'Pretender' obteve 245138.35242630768
+O agente 'SimpleRL' obteve 121929.84121671203
+O agente 'GP_agent' obteve 119425.43430736267
+O agente 'Pretender' obteve 245138.35242630768
+O agente 'Karmine' obteve 91847.52188997941
+Vencedor: Pretender
+Score: 245138.35242630768
+
+
+O agente 'GP_agent' obteve 133689.7716762782
+O agente 'Pretender' obteve 256292.04050287264
+O agente 'Karmine' obteve 80957.04318390171
+O agente 'SimpleRL' obteve 122230.80586058841
+O agente 'Pretender' obteve 256292.04050287264
+Vencedor: Pretender
+Score: 256292.04050287264
+
+
+O agente 'GP_agent' obteve 127570.34344043846
+O agente 'SimpleRL' obteve 125447.11473874698
+O agente 'Karmine' obteve 82161.10270764885
+O agente 'Pretender' obteve 243058.99865962495
+O agente 'Pretender' obteve 243058.99865962495
+Vencedor: Pretender
+Score: 243058.99865962495
+
+
+O agente 'Karmine' obteve 84160.42722793511
+O agente 'SimpleRL' obteve 119462.89228985625
+O agente 'Pretender' obteve 241058.72993680506
+O agente 'Pretender' obteve 241058.72993680506
+O agente 'GP_agent' obteve 131842.2287746006
+Vencedor: Pretender
+Score: 241058.72993680506
+
+
+O agente 'Karmine' obteve 84030.08798987963
+O agente 'Pretender' obteve 241846.82226836457
+O agente 'SimpleRL' obteve 126456.60319034173
+O agente 'GP_agent' obteve 119654.04774509813
+O agente 'Pretender' obteve 241846.82226836457
+Vencedor: Pretender
+Score: 241846.82226836457
+
+
+O agente 'Pretender' obteve 242091.2456999131
+O agente 'SimpleRL' obteve 124297.09063756869
+O agente 'GP_agent' obteve 134545.63277338297
+O agente 'Pretender' obteve 242091.2456999131
+O agente 'Karmine' obteve 82863.73164870238
+Vencedor: Pretender
+Score: 242091.2456999131
+
+
+O agente 'Pretender' obteve 233941.51143561673
+O agente 'SimpleRL' obteve 114266.803958126
+O agente 'Karmine' obteve 81468.26476766147
+O agente 'Pretender' obteve 233941.51143561673
+O agente 'GP_agent' obteve 121879.49176547478
+Vencedor: Pretender
+Score: 233941.51143561673
+
+
+O agente 'GP_agent' obteve 110394.70164396195
+O agente 'Pretender' obteve 230966.0938156022
+O agente 'SimpleRL' obteve 120492.17367110327
+O agente 'Pretender' obteve 230966.0938156022
+O agente 'Karmine' obteve 78812.82102456318
+Vencedor: Pretender
+Score: 230966.0938156022
+
+
+O agente 'Karmine' obteve 75800.7769736086
+O agente 'Pretender' obteve 229868.5441815025
+O agente 'SimpleRL' obteve 104404.00564543683
+O agente 'Pretender' obteve 229868.5441815025
+O agente 'GP_agent' obteve 100741.6815699494
+Vencedor: Pretender
+Score: 229868.5441815025
+
+
+O agente 'Pretender' obteve 235830.79289423156
+O agente 'Pretender' obteve 235830.79289423156
+O agente 'SimpleRL' obteve 121244.05131769938
+O agente 'GP_agent' obteve 121597.13365898843
+O agente 'Karmine' obteve 85251.22039747158
+Vencedor: Pretender
+Score: 235830.79289423156
+
+
+O agente 'Karmine' obteve 79690.16399954082
+O agente 'GP_agent' obteve 125876.0168431768
+O agente 'Pretender' obteve 228584.59386271652
+O agente 'SimpleRL' obteve 111162.81871489041
+O agente 'Pretender' obteve 228584.59386271652
+Vencedor: Pretender
+Score: 228584.59386271652
+
+
+O agente 'Pretender' obteve 259072.19616206115
+O agente 'Karmine' obteve 73525.65036901901
+O agente 'SimpleRL' obteve 123258.48958576217
+O agente 'Pretender' obteve 259072.19616206115
+O agente 'GP_agent' obteve 119772.32892447709
+Vencedor: Pretender
+Score: 259072.19616206115
+
+
+O agente 'Pretender' obteve 245783.0016934836
+O agente 'Pretender' obteve 245783.0016934836
+O agente 'SimpleRL' obteve 122451.95328321721
+O agente 'GP_agent' obteve 111577.70461856065
+O agente 'Karmine' obteve 71543.61603858834
+Vencedor: Pretender
+Score: 245783.0016934836
+
+
+O agente 'GP_agent' obteve 96588.05769474289
+O agente 'SimpleRL' obteve 100524.64773757046
+O agente 'Karmine' obteve 66718.27525502707
+O agente 'Pretender' obteve 203968.4861852905
+O agente 'Pretender' obteve 203968.4861852905
+Vencedor: Pretender
+Score: 203968.4861852905
+
+
+O agente 'Pretender' obteve 242308.38846295147
+O agente 'Pretender' obteve 242308.38846295147
+O agente 'GP_agent' obteve 114490.040562099
+O agente 'Karmine' obteve 84472.44532087607
+O agente 'SimpleRL' obteve 119020.30079842391
+Vencedor: Pretender
+Score: 242308.38846295147
+
+
+O agente 'SimpleRL' obteve 119305.9053584165
+O agente 'Pretender' obteve 245000.13086902074
+O agente 'Pretender' obteve 245000.13086902074
+O agente 'GP_agent' obteve 119591.49012755825
+O agente 'Karmine' obteve 78386.40783767833
+Vencedor: Pretender
+Score: 245000.13086902074
+
+
+O agente 'Karmine' obteve 84152.12096022014
+O agente 'Pretender' obteve 236689.65823348906
+O agente 'GP_agent' obteve 122226.1416505923
+O agente 'Pretender' obteve 236689.65823348906
+O agente 'SimpleRL' obteve 120229.24699341056
+Vencedor: Pretender
+Score: 236689.65823348906
+
+
+O agente 'Pretender' obteve 234733.27622622682
+O agente 'Pretender' obteve 234733.27622622682
+O agente 'Karmine' obteve 78493.57931850584
+O agente 'GP_agent' obteve 126132.68913999695
+O agente 'SimpleRL' obteve 117348.27780416269
+Vencedor: Pretender
+Score: 234733.27622622682
+
+
+O agente 'Pretender' obteve 260479.28172960487
+O agente 'SimpleRL' obteve 108623.61662629845
+O agente 'Pretender' obteve 260479.28172960487
+O agente 'GP_agent' obteve 113895.77881724595
+O agente 'Karmine' obteve 83511.85646051264
+Vencedor: Pretender
+Score: 260479.28172960487
+
+
+O agente 'GP_agent' obteve 118909.69375530934
+O agente 'Karmine' obteve 65544.53497714842
+O agente 'Pretender' obteve 246902.7021306504
+O agente 'Pretender' obteve 246902.7021306504
+O agente 'SimpleRL' obteve 118003.4280048324
+Vencedor: Pretender
+Score: 246902.7021306504
+
+
+O agente 'Pretender' obteve 264059.47832150833
+O agente 'GP_agent' obteve 116631.85725824116
+O agente 'Pretender' obteve 264059.47832150833
+O agente 'Karmine' obteve 78980.60441083577
+O agente 'SimpleRL' obteve 129424.88838436984
+Vencedor: Pretender
+Score: 264059.47832150833
+
+
+O agente 'Pretender' obteve 234087.90259947654
+O agente 'Karmine' obteve 85065.09099331894
+O agente 'GP_agent' obteve 122230.12283001964
+O agente 'SimpleRL' obteve 117619.47446584265
+O agente 'Pretender' obteve 234087.90259947654
+Vencedor: Pretender
+Score: 234087.90259947654
+
+
+O agente 'Pretender' obteve 241708.25161549632
+O agente 'Karmine' obteve 79712.07682834129
+O agente 'Pretender' obteve 241708.25161549632
+O agente 'GP_agent' obteve 103670.61464315522
+O agente 'SimpleRL' obteve 113565.46423334755
+Vencedor: Pretender
+Score: 241708.25161549632
+
+
+O agente 'SimpleRL' obteve 121669.1253121138
+O agente 'GP_agent' obteve 119286.7936198097
+O agente 'Karmine' obteve 73422.01578401375
+O agente 'Pretender' obteve 256704.13331256475
+O agente 'Pretender' obteve 256704.13331256475
+Vencedor: Pretender
+Score: 256704.13331256475
+
+
+O agente 'Pretender' obteve 250048.98915197994
+O agente 'Pretender' obteve 250048.98915197994
+O agente 'SimpleRL' obteve 126553.13161091157
+O agente 'Karmine' obteve 80772.55265476959
+O agente 'GP_agent' obteve 133048.54914817674
+Vencedor: Pretender
+Score: 250048.98915197994
+
+
+O agente 'Pretender' obteve 232159.69609547773
+O agente 'Pretender' obteve 232159.69609547773
+O agente 'SimpleRL' obteve 121098.56749721551
+O agente 'GP_agent' obteve 117897.84084836546
+O agente 'Karmine' obteve 83625.50330807739
+Vencedor: Pretender
+Score: 232159.69609547773
+
+
+O agente 'Karmine' obteve 81332.47509690732
+O agente 'Pretender' obteve 231758.09641030798
+O agente 'Pretender' obteve 231758.09641030798
+O agente 'GP_agent' obteve 116403.75744673033
+O agente 'SimpleRL' obteve 122261.49144871887
+Vencedor: Pretender
+Score: 231758.09641030798
+
+
+O agente 'GP_agent' obteve 122226.87385911339
+O agente 'Pretender' obteve 232611.9195766297
+O agente 'Pretender' obteve 232611.9195766297
+O agente 'SimpleRL' obteve 119103.454487919
+O agente 'Karmine' obteve 83822.52777218922
+Vencedor: Pretender
+Score: 232611.9195766297
+
+
+O agente 'Karmine' obteve 77031.3696096728
+O agente 'Pretender' obteve 258936.32428363338
+O agente 'SimpleRL' obteve 115628.3043046547
+O agente 'GP_agent' obteve 121315.00395617187
+O agente 'Pretender' obteve 258936.32428363338
+Vencedor: Pretender
+Score: 258936.32428363338
+
+
+O agente 'GP_agent' obteve 89360.8786284374
+O agente 'Pretender' obteve 212093.59867937973
+O agente 'SimpleRL' obteve 95178.56000025349
+O agente 'Karmine' obteve 70949.27622623029
+O agente 'Pretender' obteve 212093.59867937973
+Vencedor: Pretender
+Score: 212093.59867937973
+
+
+O agente 'SimpleRL' obteve 124560.43661705122
+O agente 'Pretender' obteve 248071.89426832422
+O agente 'Pretender' obteve 248071.89426832422
+O agente 'GP_agent' obteve 119116.38212295657
+O agente 'Karmine' obteve 77179.3178368176
+Vencedor: Pretender
+Score: 248071.89426832422
+
+
+O agente 'Pretender' obteve 238038.91276503901
+O agente 'Karmine' obteve 84329.49421024053
+O agente 'Pretender' obteve 238038.91276503901
+O agente 'SimpleRL' obteve 114505.35903555815
+O agente 'GP_agent' obteve 125934.80071696888
+Vencedor: Pretender
+Score: 238038.91276503901
+
+
+O agente 'GP_agent' obteve 131708.88710198423
+O agente 'Karmine' obteve 76493.29166277652
+O agente 'SimpleRL' obteve 119085.16062852312
+O agente 'Pretender' obteve 246324.39080976334
+O agente 'Pretender' obteve 246324.39080976334
+Vencedor: Pretender
+Score: 246324.39080976334
+
+
+O agente 'Pretender' obteve 233239.0993859257
+O agente 'GP_agent' obteve 122460.74907700124
+O agente 'SimpleRL' obteve 125341.8975565868
+O agente 'Karmine' obteve 79123.3282519414
+O agente 'Pretender' obteve 233239.0993859257
+Vencedor: Pretender
+Score: 233239.0993859257
+
+
+O agente 'SimpleRL' obteve 117981.06344276406
+O agente 'Pretender' obteve 237881.63791184835
+O agente 'GP_agent' obteve 119969.85008880757
+O agente 'Pretender' obteve 237881.63791184835
+O agente 'Karmine' obteve 87182.35281795176
+Vencedor: Pretender
+Score: 237881.63791184835
+
+
+O agente 'Pretender' obteve 245926.91453807446
+O agente 'Karmine' obteve 75103.16656377021
+O agente 'Pretender' obteve 245926.91453807446
+O agente 'GP_agent' obteve 119725.48009481536
+O agente 'SimpleRL' obteve 121247.31333181528
+Vencedor: Pretender
+Score: 245926.91453807446
+
+
+O agente 'GP_agent' obteve 121718.07518997409
+O agente 'Karmine' obteve 78710.35761816928
+O agente 'SimpleRL' obteve 122283.7330815118
+O agente 'Pretender' obteve 270894.71154087567
+O agente 'Pretender' obteve 270894.71154087567
+Vencedor: Pretender
+Score: 270894.71154087567
+
+
+O agente 'Karmine' obteve 80402.81255850861
+O agente 'Pretender' obteve 227067.03651590762
+O agente 'GP_agent' obteve 119327.05833949022
+O agente 'SimpleRL' obteve 118649.70088952445
+O agente 'Pretender' obteve 227067.03651590762
+Vencedor: Pretender
+Score: 227067.03651590762
+
+
+O agente 'Pretender' obteve 265545.92766553484
+O agente 'SimpleRL' obteve 123286.35937954164
+O agente 'Pretender' obteve 265545.92766553484
+O agente 'GP_agent' obteve 113059.98778790286
+O agente 'Karmine' obteve 80440.73408906911
+Vencedor: Pretender
+Score: 265545.92766553484
+
+
+O agente 'Pretender' obteve 234528.56169799156
+O agente 'Pretender' obteve 234528.56169799156
+O agente 'Karmine' obteve 83394.48412345153
+O agente 'GP_agent' obteve 118425.00395733213
+O agente 'SimpleRL' obteve 124354.70591034184
+Vencedor: Pretender
+Score: 234528.56169799156
+
+
+O agente 'SimpleRL' obteve 127765.98788369715
+O agente 'Pretender' obteve 259238.46267113817
+O agente 'GP_agent' obteve 108215.06790026028
+O agente 'Karmine' obteve 85998.697056672
+O agente 'Pretender' obteve 259238.46267113817
+Vencedor: Pretender
+Score: 259238.46267113817
+
+
+O agente 'SimpleRL' obteve 112402.60238753291
+O agente 'Karmine' obteve 80736.02605887022
+O agente 'Pretender' obteve 234087.98031715048
+O agente 'GP_agent' obteve 106280.07823804869
+O agente 'Pretender' obteve 234087.98031715048
+Vencedor: Pretender
+Score: 234087.98031715048
+
+
+O agente 'Pretender' obteve 200860.61681072548
+O agente 'Karmine' obteve 70463.24220585595
+O agente 'SimpleRL' obteve 100864.47460095845
+O agente 'Pretender' obteve 200860.61681072548
+O agente 'GP_agent' obteve 95155.50353024603
+Vencedor: Pretender
+Score: 200860.61681072548
+
+
+O agente 'SimpleRL' obteve 126260.43945986537
+O agente 'Karmine' obteve 76506.97489464449
+O agente 'GP_agent' obteve 117275.80494248965
+O agente 'Pretender' obteve 242571.9369642404
+O agente 'Pretender' obteve 242571.9369642404
+Vencedor: Pretender
+Score: 242571.9369642404
+
+
+O agente 'Pretender' obteve 234721.3854025839
+O agente 'GP_agent' obteve 111766.93323298787
+O agente 'SimpleRL' obteve 117275.20624704506
+O agente 'Karmine' obteve 71371.68549821615
+O agente 'Pretender' obteve 234721.3854025839
+Vencedor: Pretender
+Score: 234721.3854025839
+
+
+O agente 'Pretender' obteve 228044.98794633147
+O agente 'SimpleRL' obteve 101397.64858160203
+O agente 'Pretender' obteve 228044.98794633147
+O agente 'Karmine' obteve 66853.36752530957
+O agente 'GP_agent' obteve 110063.36852598537
+Vencedor: Pretender
+Score: 228044.98794633147
+
+
+O agente 'Pretender' obteve 234170.6296826997
+O agente 'GP_agent' obteve 120811.00022409063
+O agente 'Pretender' obteve 234170.6296826997
+O agente 'SimpleRL' obteve 126598.97029777928
+O agente 'Karmine' obteve 81565.1796739499
+Vencedor: Pretender
+Score: 234170.6296826997
+
+
+O agente 'Pretender' obteve 249969.61717713298
+O agente 'Pretender' obteve 249969.61717713298
+O agente 'Karmine' obteve 87249.75467986324
+O agente 'SimpleRL' obteve 106005.16974127201
+O agente 'GP_agent' obteve 129665.45227336475
+Vencedor: Pretender
+Score: 249969.61717713298
+
+
+O agente 'Karmine' obteve 77881.31604463527
+O agente 'Pretender' obteve 246209.87495551666
+O agente 'SimpleRL' obteve 120027.0989869885
+O agente 'Pretender' obteve 246209.87495551666
+O agente 'GP_agent' obteve 121604.66595817269
+Vencedor: Pretender
+Score: 246209.87495551666
+
+
+O agente 'GP_agent' obteve 122209.25448262526
+O agente 'Pretender' obteve 224777.37039481674
+O agente 'SimpleRL' obteve 118024.42692461527
+O agente 'Karmine' obteve 82506.46839196222
+O agente 'Pretender' obteve 224777.37039481674
+Vencedor: Pretender
+Score: 224777.37039481674
+
+
+O agente 'GP_agent' obteve 123427.36142187571
+O agente 'SimpleRL' obteve 123271.70672400965
+O agente 'Pretender' obteve 232206.8699904863
+O agente 'Karmine' obteve 75634.03219323479
+O agente 'Pretender' obteve 232206.8699904863
+Vencedor: Pretender
+Score: 232206.8699904863
+
+
+O agente 'Pretender' obteve 239279.25562888558
+O agente 'Pretender' obteve 239279.25562888558
+O agente 'Karmine' obteve 77072.8953741186
+O agente 'SimpleRL' obteve 119213.38230166283
+O agente 'GP_agent' obteve 128829.10659417586
+Vencedor: Pretender
+Score: 239279.25562888558
+
+
+O agente 'GP_agent' obteve 100524.70988955052
+O agente 'Pretender' obteve 237201.88834811797
+O agente 'Karmine' obteve 79315.29681006634
+O agente 'Pretender' obteve 237201.88834811797
+O agente 'SimpleRL' obteve 116234.31284562591
+Vencedor: Pretender
+Score: 237201.88834811797
+
+
+O agente 'SimpleRL' obteve 115470.98474335586
+O agente 'Pretender' obteve 245945.61496214572
+O agente 'Karmine' obteve 77876.79004743765
+O agente 'GP_agent' obteve 130125.84322085445
+O agente 'Pretender' obteve 245945.61496214572
+Vencedor: Pretender
+Score: 245945.61496214572
+
+
+O agente 'Pretender' obteve 230653.6557510405
+O agente 'SimpleRL' obteve 113238.90227144792
+O agente 'Pretender' obteve 230653.6557510405
+O agente 'Karmine' obteve 74627.44899509623
+O agente 'GP_agent' obteve 111979.24587903198
+Vencedor: Pretender
+Score: 230653.6557510405
+
+
+O agente 'GP_agent' obteve 127775.19454474286
+O agente 'Pretender' obteve 234801.41924217285
+O agente 'SimpleRL' obteve 136637.08379484533
+O agente 'Pretender' obteve 234801.41924217285
+O agente 'Karmine' obteve 78087.94963435123
+Vencedor: Pretender
+Score: 234801.41924217285
+
+
+O agente 'Pretender' obteve 236296.57356676355
+O agente 'GP_agent' obteve 122623.3567877289
+O agente 'SimpleRL' obteve 119413.43046428195
+O agente 'Pretender' obteve 236296.57356676355
+O agente 'Karmine' obteve 76960.65523360543
+Vencedor: Pretender
+Score: 236296.57356676355
+
+
+O agente 'SimpleRL' obteve 122130.19104391962
+O agente 'GP_agent' obteve 138474.51065248917
+O agente 'Karmine' obteve 78825.92693373933
+O agente 'Pretender' obteve 249151.17935084656
+O agente 'Pretender' obteve 249151.17935084656
+Vencedor: Pretender
+Score: 249151.17935084656
+
+
+O agente 'Pretender' obteve 231870.46244873301
+O agente 'Pretender' obteve 231870.46244873301
+O agente 'SimpleRL' obteve 115433.57931020221
+O agente 'Karmine' obteve 82707.16226048514
+O agente 'GP_agent' obteve 120643.1413770532
+Vencedor: Pretender
+Score: 231870.46244873301
+
+
+O agente 'Pretender' obteve 233698.70793495484
+O agente 'Karmine' obteve 78474.46349782795
+O agente 'GP_agent' obteve 116699.52688516992
+O agente 'SimpleRL' obteve 122991.8208611217
+O agente 'Pretender' obteve 233698.70793495484
+Vencedor: Pretender
+Score: 233698.70793495484
+
+
+O agente 'Karmine' obteve 64757.711855423375
+O agente 'Pretender' obteve 198774.9489866447
+O agente 'SimpleRL' obteve 106318.11748010396
+O agente 'Pretender' obteve 198774.9489866447
+O agente 'GP_agent' obteve 96951.04965028154
+Vencedor: Pretender
+Score: 198774.9489866447
+
+
+O agente 'SimpleRL' obteve 96795.23775111578
+O agente 'GP_agent' obteve 94974.24181792354
+O agente 'Pretender' obteve 236224.16110541273
+O agente 'Pretender' obteve 236224.16110541273
+O agente 'Karmine' obteve 67085.1733310375
+Vencedor: Pretender
+Score: 236224.16110541273
+
+
+O agente 'Pretender' obteve 218589.38996011406
+O agente 'GP_agent' obteve 100329.8114950235
+O agente 'Pretender' obteve 218589.38996011406
+O agente 'SimpleRL' obteve 93711.60738375527
+O agente 'Karmine' obteve 70799.72238350152
+Vencedor: Pretender
+Score: 218589.38996011406
+
+
+O agente 'Pretender' obteve 208897.86876013983
+O agente 'SimpleRL' obteve 93359.63384199192
+O agente 'Pretender' obteve 208897.86876013983
+O agente 'Karmine' obteve 65112.53848578119
+O agente 'GP_agent' obteve 98752.85895201162
+Vencedor: Pretender
+Score: 208897.86876013983
+
+

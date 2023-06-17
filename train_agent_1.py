@@ -36,7 +36,7 @@ class ReinforcementLearningAgent:
       if len(line.split()) > 1:
         self.fix_matrix(line)
 
-        if random.random() < 0.99:
+        if random.random() < 0.7:
           self.actions[line.split()[0]][line.split()[1]][line.split()[2]][line.split()[3]]=line.split()[4]
         else:
           self.actions[line.split()[0]][line.split()[1]][line.split()[2]][line.split()[3]]=random.choice(['0','1'])
@@ -71,7 +71,7 @@ class ReinforcementLearningAgent:
 
   # Nome de seu agente deve ser colocado aqui  
   def get_name(self):
-    return "Train_1"
+    return "GP_agent"
   
 
   # Um exemplo basico de algo proximo de tit-for-tat
@@ -100,9 +100,9 @@ class ReinforcementLearningAgent:
     elif your_action == "split":
       self.score -= 1
     self.score_total += reward
-    if self.score >= self.old_score:
-      self.replace_police()
-      print(self.score)
+    #if self.score >= self.old_score:
+      #self.replace_police()
+      #print(self.score)
     if self.last_round:
       self.last_opponent_action = "None"
     else:   
