@@ -18,7 +18,7 @@ class RLAgent:
     # Q table
     self.Q = defaultdict(lambda: [0.0, 0.0])
     self.action_list = ["split", "steal"]
-    
+    self.score = 0
     self.current_input = None
     self.current_output = None    
     
