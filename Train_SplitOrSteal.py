@@ -34,16 +34,16 @@ def select_agents(type):
   if type == "Difficult":
     return [train_2, train_3, rl, train]
 
-  if type == "Very difficult":
+  if type == "Very_difficult":
     return [pretender, pretender, rl, karmine, train]
 
-  if type == "Karma-aware":
+  if type == "Karma_aware":
     return [karmine, karmine, rl, stealer, train]
 
   if type == "Opportunists":
     return [opportunist,opportunist, rl, train]
 
-  if type == "3 Karmines":
+  if type == "3_Karmines":
     return [karmine,  karmine, karmine, train]
 
 
@@ -139,15 +139,15 @@ def play_round(game, agent1, agent2, remaining):
   # Play a round
   game.play_round(agent1, agent2, remaining)
 
-ntrains = 5000
+ntrains = 10
 log = open("Log.txt","w")
 
-game_types = ["Allgame","Simple","Difficult","Very difficult","Karma-aware","Opportunists","3 Karmines"]
+game_types = ["Allgame","Simple","Difficult","Very_difficult","Karma_aware","Opportunists","3_Karmines"]
 
+
+df1 = open(f"score.txt", "w")
+df1.write(f"i name total_amount reward type\n")
 for type in game_types:
-  df1 = open(f"score_{type}.txt", "w")
-  df2 = open(f"reward_{type}.txt", "w")
-  df3 = open(f"score_all_{type}.txt", "w")
 
   for i in range(ntrains):
     log.close()
@@ -182,13 +182,13 @@ for type in game_types:
     scores = []
     for a in agents:
       log.write(f"O agente '{a.name}' obteve {a.total_amount}\n")
-      df3.write(f"{i} {a.name} {a.total_amount}\n")
       if a.total_amount > max_score:
         best = a
         max_score = a.total_amount
+        
+      df1.write(f"{i} {a.name} {a.total_amount} {a.agent.score} {type}\n")
+      
       if "GP_agent" in a.name:
-        df1.write(f"{i} {a.name} {a.total_amount}\n")
-        df2.write(f"{i} {a.name} {a.agent.score}\n")
         if a.agent.score >= a.agent.old_score:
           a.agent.replace_police()
     log.write(f"Vencedor: {best.name}\n")
