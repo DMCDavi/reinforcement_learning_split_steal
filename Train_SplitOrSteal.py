@@ -180,6 +180,7 @@ for game_type in game_types:
       trains_data.append((train_id, a.name, a.total_amount, a.agent.score, game_type))
       
       if "GP_agent" in a.name:
+        a.agent.epsilon = 1 - np.exp(-5*train_id/ntrains)
         if a.agent.score >= a.agent.old_score:
           a.agent.replace_police()
   
