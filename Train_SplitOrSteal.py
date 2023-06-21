@@ -139,7 +139,7 @@ def play_round(game, agent1, agent2, remaining):
   # Play a round
   game.play_round(agent1, agent2, remaining)
 
-ntrains = 10
+ntrains = 500
 log = open("Log.txt","w")
 
 game_types = ["Allgame","Simple","Difficult","Very_difficult","Karma_aware","Opportunists","3_Karmines"]
@@ -196,4 +196,5 @@ for type in game_types:
   
   for a in agents:
      if "GP_agent" in a.name:
+        a.agent.save_police_backup(type)
         a.agent.reset_police()
