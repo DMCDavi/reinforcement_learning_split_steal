@@ -1,9 +1,12 @@
 import random
+import shutil
 
 class ReinforcementLearningAgent:
-  def __init__(self):
+  def __init__(self, id):
+    # Identificador do agente
+    self.id = id
     # Chance percentual do agente tomar a ação descrita na política
-    self.epsilon = 0.9
+    self.epsilon = 1
     # Recompensa do agente
     self.score = 0
     # Quantidade total de dinheiro que o agente ganhou
@@ -13,7 +16,7 @@ class ReinforcementLearningAgent:
     # Flag indicando se essa seria a ultima rodada
     self.last_round = False
     # Nome do arquivo da política do agente
-    self.police = "police_7.txt"
+    self.police = f"gp_police_{id}.txt"
     # Dicionário com a política do agente
     self.actions = {}
     # Recompensa da última melhor política
@@ -46,10 +49,11 @@ class ReinforcementLearningAgent:
       if len(line.split()) > 1:
         self.create_actions_dictionary_structure(line)
 
+        # Cada ação lida da política tem uma chance percentual (epsilon) de ser trocada
         if random.random() < self.epsilon:
           self.actions[line.split()[0]][line.split()[1]][line.split()[2]][line.split()[3]]=line.split()[4]
         else:
-          self.actions[line.split()[0]][line.split()[1]][line.split()[2]][line.split()[3]]=random.choice(['0','1'])
+          self.actions[line.split()[0]][line.split()[1]][line.split()[2]][line.split()[3]]=random.choice(['split','steal'])
       else:
         self.old_score = float(line)
     file.close()
@@ -61,7 +65,7 @@ class ReinforcementLearningAgent:
         for your_karma in range(11):
             for his_lastaction in ["None","split","steal"]:
                 for rounds_left in range (10):
-                    r = random.choice([0,1])
+                    r = random.choice(['split','steal'])
                     police.write(str(his_karma-5) + " " + str(your_karma-5) + " " + his_lastaction + 
                                 " " + str(rounds_left) + " " + str(r) + "\n")
     police.write("0")
@@ -81,9 +85,12 @@ class ReinforcementLearningAgent:
     police.write(str(self.score))
     police.close()
 
+  def save_police_backup(self, game_type):
+    shutil.copy2(self.police, f"trained_{game_type}_{self.police}")
+
   # Retona o nome do agente
   def get_name(self):
-    return "GP_Agent"
+    return f"GP_agent_{self.id}"
   
   # Função que escolhe qual ação será tomada
   def decision(self, amount, rounds_left, your_karma, his_karma):
@@ -95,15 +102,10 @@ class ReinforcementLearningAgent:
     if rounds_left>=10:
       rounds_left=9
   
-    # Toma as ações baseadas na política, em que 0 representa dividir e 1 roubar
-    if self.actions[str(his_karma)][str(your_karma)][str(self.last_opponent_action)][str(rounds_left)] == '0':
-      return "steal"
-    elif self.actions[str(his_karma)][str(your_karma)][str(self.last_opponent_action)][str(rounds_left)] == '1':
-      return "split"
-    else:
-      raise RuntimeError("Unknown action")
+    # Toma as ações baseadas na política
+    return self.actions[str(his_karma)][str(your_karma)][str(self.last_opponent_action)][str(rounds_left)]
 
-  # Finaliza a rodada, calcula a recompensa do agente e verifica se a política será substituída 
+  # Finaliza a rodada e calcula a recompensa do agente
   def result(self, your_action, his_action, total_possible, reward):
     if total_possible == reward:
       self.score += 2
@@ -112,10 +114,6 @@ class ReinforcementLearningAgent:
     elif your_action == "split":
       self.score -= 1
     self.total_amount += reward
-
-    if self.score >= self.old_score:
-      self.replace_police()
-      print(self.score)
 
     if self.last_round:
       self.last_opponent_action = "None"

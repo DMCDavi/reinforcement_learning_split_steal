@@ -24,7 +24,7 @@ class StaticAgent:
   def __init__(self, name, decision_callback):
     self.decision_callback = decision_callback
     self.name = name
-    
+    self.score = 0
   def get_name(self):
     return self.name
 
