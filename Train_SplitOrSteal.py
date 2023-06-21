@@ -3,6 +3,7 @@ import os
 import numpy as np
 import pandas as pd
 from itertools import combinations
+from collections import defaultdict
 import simple_opponents
 import gp_agent
 import rl_agent
@@ -155,7 +156,6 @@ for game_type in game_types:
 
     game = Game(total_rounds)
 
-    from collections import defaultdict
     matches_played = defaultdict(lambda: 0)
 
     # Play rounds
