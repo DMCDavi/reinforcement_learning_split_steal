@@ -52,10 +52,8 @@ class ReinforcementLearningAgent:
         # Cada ação lida da política tem uma chance percentual (epsilon) de ser trocada
         if random.random() < self.epsilon:
           self.actions[line.split()[0]][line.split()[1]][line.split()[2]][line.split()[3]]=line.split()[4]
-        elif line.split()[4] == 'steal':
-          self.actions[line.split()[0]][line.split()[1]][line.split()[2]][line.split()[3]]='split'
-        elif line.split()[4] == 'split':
-          self.actions[line.split()[0]][line.split()[1]][line.split()[2]][line.split()[3]]='steal'
+        else:
+          self.actions[line.split()[0]][line.split()[1]][line.split()[2]][line.split()[3]]=random.choice(['split','steal'])
       else:
         self.old_score = float(line)
     file.close()
