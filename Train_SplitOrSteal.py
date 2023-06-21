@@ -1,4 +1,5 @@
 import random
+import os
 import numpy as np
 import pandas as pd
 from itertools import combinations
@@ -136,7 +137,7 @@ def play_round(game, agent1, agent2, remaining):
   game.prepare_round()   
   game.play_round(agent1, agent2, remaining)
 
-ntrains = 10
+ntrains = 500
 
 game_types = ["Allgame","Simple","Difficult","Very_difficult","Karma_aware","Opportunists","3_Karmines"]
 
@@ -182,10 +183,16 @@ for game_type in game_types:
         if a.agent.score >= a.agent.old_score:
           a.agent.replace_police()
   
+    # Imprime progresso no console em 1/4, 2/4 e 3/4 de conclusão
+    if train_id in [int(ntrains/4), int(ntrains/2), int(3*ntrains/4)]:
+        print(f"{int(train_id/ntrains * 100)}% concluído para o treino de {game_type}")
+
   for a in agents:
      if "GP_agent" in a.name:
         a.agent.save_police_backup(game_type)
         a.agent.reset_police()
+
+  os.system("cls" if os.name == "nt" else "clear")  # Limpa o console
 
 df = pd.DataFrame(trains_data, columns=["i", "name", "total_amount", "reward", "type"])
 df.to_csv("score.txt", sep=" ", index=False)
