@@ -1,5 +1,7 @@
 import random
+import os
 import numpy as np
+import pandas as pd
 from itertools import combinations
 import simple_opponents
 import gp_agent
@@ -8,9 +10,6 @@ import rl_agent
 
 mean = 100
 variance = 10000  # Large variance
-
-#Create Log file
-log = open("Log.txt","w")
 
 def select_agents(type):
 
@@ -136,25 +135,19 @@ class Player:
 
 def play_round(game, agent1, agent2, remaining):
   game.prepare_round()   
-  # Play a round
   game.play_round(agent1, agent2, remaining)
 
-ntrains = 10
-log = open("Log.txt","w")
+ntrains = 500
 
 game_types = ["Allgame","Simple","Difficult","Very_difficult","Karma_aware","Opportunists","3_Karmines"]
 
+trains_data = []
 
-df1 = open(f"score.txt", "w")
-df1.write(f"i name total_amount reward type\n")
-for type in game_types:
+for game_type in game_types:
 
-  for i in range(ntrains):
-    log.close()
-    log = open("Log.txt","a")
-
+  for train_id in range(ntrains):
     # Create agents
-    agents = select_agents(type)
+    agents = select_agents(game_type)
 
     nrematches = 10 # Could very
     nfullrounds = 50 # How many full cycles
@@ -181,19 +174,26 @@ for type in game_types:
     best = None
     scores = []
     for a in agents:
-      log.write(f"O agente '{a.name}' obteve {a.total_amount}\n")
       if a.total_amount > max_score:
         best = a
         max_score = a.total_amount
-        
-      df1.write(f"{i} {a.name} {a.total_amount} {a.agent.score} {type}\n")
+      trains_data.append((train_id, a.name, a.total_amount, a.agent.score, game_type))
       
       if "GP_agent" in a.name:
+        a.agent.epsilon = 0.2 + 0.8 * (train_id / ntrains)
         if a.agent.score >= a.agent.old_score:
           a.agent.replace_police()
-    log.write(f"Vencedor: {best.name}\n")
-    log.write(f"Score: {max_score}\n\n\n")  
   
+    # Imprime progresso no console em 1/4, 2/4 e 3/4 de conclusão
+    if train_id in [int(ntrains/4), int(ntrains/2), int(3*ntrains/4)]:
+        print(f"{int(train_id/ntrains * 100)}% concluído para o treino de {game_type}")
+
   for a in agents:
      if "GP_agent" in a.name:
+        a.agent.save_police_backup(game_type)
         a.agent.reset_police()
+
+  os.system("cls" if os.name == "nt" else "clear")  # Limpa o console
+
+df = pd.DataFrame(trains_data, columns=["i", "name", "total_amount", "reward", "type"])
+df.to_csv("score.txt", sep=" ", index=False)
