@@ -153,8 +153,8 @@ class ReinforcementLearningAgent:
 
     future_rounds_left = self.rounds_left-1
     if future_rounds_left >=0:
-      f_split = self.actions[str(future_his_karma)][str(self.your_karma)][str(his_action)][str(future_rounds_left)]["split"]
-      f_steal = self.actions[str(future_his_karma)][str(self.your_karma)][str(his_action)][str(future_rounds_left)]["steal"]
+      f_split = self.actions[str(future_his_karma)][str(future_your_karma)][str(his_action)][str(future_rounds_left)]["split"]
+      f_steal = self.actions[str(future_his_karma)][str(future_your_karma)][str(his_action)][str(future_rounds_left)]["steal"]
       future = f_split if f_split > f_steal else f_steal
     else:
       future=0
@@ -162,7 +162,7 @@ class ReinforcementLearningAgent:
     mean = self.actions[str(self.his_karma)][str(self.your_karma)][str(self.last_opponent_action)][str(self.rounds_left)][your_action]
     mean = self.lr*(score+self.fi*future)+(1-self.lr)*mean
 
-    self.actions[str(self.his_karma)][str(future_your_karma)][str(self.last_opponent_action)][str(self.rounds_left)][your_action]=mean
+    self.actions[str(self.his_karma)][str(self.your_karma)][str(self.last_opponent_action)][str(self.rounds_left)][your_action]=mean
     
     if self.last_round:
       self.last_opponent_action = "None"
