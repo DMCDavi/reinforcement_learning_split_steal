@@ -143,6 +143,11 @@ def update_agents_rates(agents, train_id, ntrains):
 def clear_console():
   os.system("cls" if os.name == "nt" else "clear")
 
+# Salva os dados dos treinos em um arquivo score.txt
+def save_score_file(score_data):
+  df = pd.DataFrame(score_data, columns=["i", "name", "total_amount", "reward", "type"])
+  df.to_csv("score.txt", sep=" ", index=False)
+
 ntrains = 10
 
 game_types = ["Allgame", "Simple", "Difficult", "Very_difficult", "Karma_aware", "Opportunists", "3_Karmines"]
@@ -202,5 +207,4 @@ for game_type in game_types:
 
   clear_console()
 
-df = pd.DataFrame(trains_data, columns=["i", "name", "total_amount", "reward", "type"])
-df.to_csv("score.txt", sep=" ", index=False)
+save_score_file(trains_data)
