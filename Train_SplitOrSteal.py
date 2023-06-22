@@ -31,7 +31,7 @@ def select_agents(type):
   if type == "Simple":
     return [karmine,  karmine, rl, train]
 
-  if type == "Simple":
+  if type == "Difficult":
     return [train_2, train_3, rl, train]
 
   if type == "Very_difficult":
@@ -140,9 +140,7 @@ def play_round(game, agent1, agent2, remaining):
 
 ntrains = 500
 
-#game_types = ["Allgame","Simple","Simple", "Very_difficult", "Karma_aware", "Opportunists", "3_Karmines"]
-game_types = ["Karma_aware"]
-
+game_types = ["Allgame","Simple","Difficult", "Very_difficult", "Karma_aware", "Opportunists", "3_Karmines"]
 
 trains_data = []
 
