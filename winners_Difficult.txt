@@ -1,5 +1,0 @@
-Agente Count
-GP_agent_2 4
-GP_agent_3 4
-SimpleRL 8
-GP_agent_1 4

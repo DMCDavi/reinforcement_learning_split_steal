@@ -1,5 +1,0 @@
-Agente Count
-Opportunist 10
-Opportunist 0
-SimpleRL 2
-GP_agent_1 2
