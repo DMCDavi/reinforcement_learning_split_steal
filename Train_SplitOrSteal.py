@@ -139,6 +139,10 @@ def update_agents_rates(agents, train_id, ntrains):
       a.agent.epsilon = 0.2 + 0.8 * (train_id / ntrains)
       a.agent.lr = 1 - 0.8 * (train_id / ntrains)
 
+# Limpa o console
+def clear_console():
+  os.system("cls" if os.name == "nt" else "clear")
+
 ntrains = 10
 
 game_types = ["Allgame", "Simple", "Difficult", "Very_difficult", "Karma_aware", "Opportunists", "3_Karmines"]
@@ -196,7 +200,7 @@ for game_type in game_types:
         a.agent.save_police_backup(game_type)
         a.agent.reset_police()
 
-  os.system("cls" if os.name == "nt" else "clear")  # Limpa o console
+  clear_console()
 
 df = pd.DataFrame(trains_data, columns=["i", "name", "total_amount", "reward", "type"])
 df.to_csv("score.txt", sep=" ", index=False)
