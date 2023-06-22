@@ -7,7 +7,7 @@ class ReinforcementLearningAgent:
     # Identificador do agente
     self.id = id
     # Chance percentual do agente tomar a ação descrita na política
-    self.epsilon = 1
+    self.epsilon = 0.5
     # Recompensa do agente
     self.score = 0
     # Quantidade total de dinheiro que o agente ganhou
@@ -29,7 +29,7 @@ class ReinforcementLearningAgent:
     # Learn Rate
     self.lr = 0.2
     # Future Importance
-    self.fi = 5
+    self.fi = 0.9
 
     try:
       self.read_police()
@@ -62,6 +62,8 @@ class ReinforcementLearningAgent:
         self.create_actions_dictionary_structure(line)
 
         self.actions[line.split()[0]][line.split()[1]][line.split()[2]][line.split()[3]][line.split()[4]]=float(line.split()[5])
+      else:
+        self.old_score = int(line)
     file.close()
 
   # Cria o arquivo da política completamente aleatório
@@ -74,6 +76,7 @@ class ReinforcementLearningAgent:
                     for decision in ["split","steal"]:
                       police.write(str(his_karma-5) + " " + str(your_karma-5) + " " + his_lastaction + 
                                   " " + str(rounds_left) + " " + decision + " 0\n")
+    police.write("0")
     police.close()
 
   # Substitui o arquivo pela política atual
@@ -87,6 +90,7 @@ class ReinforcementLearningAgent:
                       police.write(str(his_karma-5) + " " + str(your_karma-5) + " " + his_lastaction + " " + 
                                   str(rounds_left) + " " + decision + " " +str(self.actions[str(his_karma-5)][str(your_karma-5)]
                                   [str(his_lastaction)][str(rounds_left)][decision]) + "\n")
+    police.write(str(self.score))
     police.close()
 
   def save_police_backup(self, game_type):
@@ -133,6 +137,8 @@ class ReinforcementLearningAgent:
     else:
       score = 0
     self.total_amount += reward
+    self.score += score
+
 
     # Calcula o estado futuro
     if your_action == "split":
@@ -145,11 +151,13 @@ class ReinforcementLearningAgent:
     else:
       future_his_karma = self.his_karma-1 if self.his_karma > -5 else -5
 
-    future_rounds_left = self.rounds_left-1 if self.rounds_left > 0 else 0
-
-    f_split = self.actions[str(future_his_karma)][str(self.your_karma)][str(his_action)][str(future_rounds_left)]["split"]
-    f_steal = self.actions[str(future_his_karma)][str(self.your_karma)][str(his_action)][str(future_rounds_left)]["steal"]
-    future = f_split if f_split > f_steal else f_steal
+    future_rounds_left = self.rounds_left-1
+    if future_rounds_left >=0:
+      f_split = self.actions[str(future_his_karma)][str(self.your_karma)][str(his_action)][str(future_rounds_left)]["split"]
+      f_steal = self.actions[str(future_his_karma)][str(self.your_karma)][str(his_action)][str(future_rounds_left)]["steal"]
+      future = f_split if f_split > f_steal else f_steal
+    else:
+      future=0
     # Atualiza a recompensa
     mean = self.actions[str(self.his_karma)][str(self.your_karma)][str(self.last_opponent_action)][str(self.rounds_left)][your_action]
     mean = self.lr*(score+self.fi*future)+(1-self.lr)*mean

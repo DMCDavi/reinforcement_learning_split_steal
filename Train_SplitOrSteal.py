@@ -31,7 +31,7 @@ def select_agents(type):
   if type == "Simple":
     return [karmine,  karmine, rl, train]
 
-  if type == "Difficult":
+  if type == "Simple":
     return [train_2, train_3, rl, train]
 
   if type == "Very_difficult":
@@ -140,7 +140,9 @@ def play_round(game, agent1, agent2, remaining):
 
 ntrains = 500
 
-game_types = ["Very_difficult"]
+#game_types = ["Allgame","Simple","Simple", "Very_difficult", "Karma_aware", "Opportunists", "3_Karmines"]
+game_types = ["Karma_aware"]
+
 
 trains_data = []
 
@@ -155,8 +157,6 @@ for game_type in game_types:
       if "GP_agent" in a.name:
         a.agent.epsilon = 0.2 + 0.8 * (train_id / ntrains)
         a.agent.lr = 1 - 0.8 * (train_id / ntrains)
-        if train_id>0:
-          a.agent.actions = actions
 
     nrematches = 10 # Could very
     nfullrounds = 50 # How many full cycles
@@ -188,8 +188,7 @@ for game_type in game_types:
       trains_data.append((train_id, a.name, a.total_amount, a.agent.score, game_type))
       
       if "GP_agent" in a.name:
-        actions = a.agent.actions
-        #a.agent.replace_police()
+        a.agent.replace_police()
   
     # Imprime progresso no console em 1/4, 2/4 e 3/4 de conclusão
     if train_id in [int(ntrains/4), int(ntrains/2), int(3*ntrains/4)]:
