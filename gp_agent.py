@@ -168,7 +168,3 @@ class ReinforcementLearningAgent:
       self.last_opponent_action = "None"
     else:   
       self.last_opponent_action = his_action
-  
-
-  def update_reward(self):
-    pass
