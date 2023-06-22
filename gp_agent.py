@@ -95,6 +95,7 @@ class ReinforcementLearningAgent:
     police.write(str(self.score))
     police.close()
 
+  # Salva a cópia da última política para o tipo de jogo
   def save_police_backup(self, game_type):
     shutil.copy2(self.police, f"trained_{game_type}_{self.police}")
 
@@ -117,16 +118,52 @@ class ReinforcementLearningAgent:
     self.his_karma = his_karma
     self.your_karma = your_karma
 
-    # Toma as ações baseadas na política
+    # Escolhe se vai seguir a política (exploit) ou não (explore) com base no valor de epsilon
     if random.random() < self.epsilon:
       r_split = float(self.actions[str(his_karma)][str(your_karma)][str(self.last_opponent_action)][str(rounds_left)]["split"])
       r_steal = float(self.actions[str(his_karma)][str(your_karma)][str(self.last_opponent_action)][str(rounds_left)]["steal"])
+      # Escolhe a ação que tem a maior pontuação
       if r_split>r_steal:
         return "split"
       else:
         return "steal"
     else:
       return random.choice(["split","steal"])
+
+  # Calcula e seta a média do score de acordo a quantidade de decisões
+  def set_mean_decisions_score(self, score):
+    self.score *= self.ndecisions
+    self.score += score
+    self.ndecisions += 1
+    self.score /= self.ndecisions
+
+  # Calcula o score da ação tomada com base em estados futuros
+  def calculate_action_score(self, your_action, his_action, score):
+    # Calcula o karma do agente com base na ação
+    if your_action == "split":
+      future_your_karma = self.your_karma+1 if self.your_karma < 5 else 5
+    else:
+      future_your_karma = self.your_karma-1 if self.your_karma > -5 else -5
+
+    # Calcula o karma do oponente com base na ação dele
+    if his_action == "split":
+      future_his_karma = self.his_karma+1 if self.his_karma < 5 else 5
+    else:
+      future_his_karma = self.his_karma-1 if self.his_karma > -5 else -5
+
+    # Diminui em 1 a quantidade de rodadas faltantes para a ação futura 
+    future_rounds_left = self.rounds_left-1
+    # Verifica qual o score da ação que será tomada na próxima rodada
+    if future_rounds_left >=0:
+      f_split = self.actions[str(future_his_karma)][str(future_your_karma)][str(his_action)][str(future_rounds_left)]["split"]
+      f_steal = self.actions[str(future_his_karma)][str(future_your_karma)][str(his_action)][str(future_rounds_left)]["steal"]
+      future = f_split if f_split > f_steal else f_steal
+    else:
+      future=0
+
+    action_score = self.actions[str(self.his_karma)][str(self.your_karma)][str(self.last_opponent_action)][str(self.rounds_left)][your_action]
+    # Calcula a recompensa com base no futuro e taxas de aprendizado
+    return self.lr*(score+self.fi*future)+(1-self.lr)*action_score
 
   # Finaliza a rodada e calcula a recompensa do agente
   def result(self, your_action, his_action, total_possible, reward):
@@ -140,35 +177,14 @@ class ReinforcementLearningAgent:
       score = 0
 
     self.total_amount += reward
-    self.score *= self.ndecisions
-    self.score += score
-    self.ndecisions += 1
-    self.score /= self.ndecisions
 
-    # Calcula o estado futuro
-    if your_action == "split":
-      future_your_karma = self.your_karma+1 if self.your_karma < 5 else 5
-    else:
-      future_your_karma = self.your_karma-1 if self.your_karma > -5 else -5
+    self.set_mean_decisions_score(score)
 
-    if his_action == "split":
-      future_his_karma = self.his_karma+1 if self.his_karma < 5 else 5
-    else:
-      future_his_karma = self.his_karma-1 if self.his_karma > -5 else -5
+    action_score = self.calculate_action_score(your_action, his_action, score)
 
-    future_rounds_left = self.rounds_left-1
-    if future_rounds_left >=0:
-      f_split = self.actions[str(future_his_karma)][str(future_your_karma)][str(his_action)][str(future_rounds_left)]["split"]
-      f_steal = self.actions[str(future_his_karma)][str(future_your_karma)][str(his_action)][str(future_rounds_left)]["steal"]
-      future = f_split if f_split > f_steal else f_steal
-    else:
-      future=0
-    # Atualiza a recompensa
-    mean = self.actions[str(self.his_karma)][str(self.your_karma)][str(self.last_opponent_action)][str(self.rounds_left)][your_action]
-    mean = self.lr*(score+self.fi*future)+(1-self.lr)*mean
-
-    self.actions[str(self.his_karma)][str(self.your_karma)][str(self.last_opponent_action)][str(self.rounds_left)][your_action]=mean
+    self.actions[str(self.his_karma)][str(self.your_karma)][str(self.last_opponent_action)][str(self.rounds_left)][your_action]=action_score
     
+    # Salva a última ação do oponente
     if self.last_round:
       self.last_opponent_action = "None"
     else:   
