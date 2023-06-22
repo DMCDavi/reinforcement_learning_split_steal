@@ -13,39 +13,29 @@ from collections import defaultdict
 mean = 100
 variance = 10000  # Large variance
 
-def select_agents(type):
-
-  splitter = Player(simple_opponents.Splitter())
-  stealer = Player(simple_opponents.Stealer())
-  randy = Player(simple_opponents.Randy())
-  karmine = Player(simple_opponents.Karmine())
-  opportunist = Player(simple_opponents.Opportunist())
-  pretender = Player(simple_opponents.Pretender())
+def create_agents(type):
   train = Player(gp_agent.ReinforcementLearningAgent(1))
-  train_2 = Player(gp_agent.ReinforcementLearningAgent(2))
-  train_3 = Player(gp_agent.ReinforcementLearningAgent(3))
-  rl=Player(rl_agent.RLAgent())
 
   if type == "Allgame":
-    return [splitter, stealer, randy, karmine, opportunist, pretender, train]
+    return [Player(simple_opponents.Splitter()), Player(simple_opponents.Stealer()), Player(simple_opponents.Randy()), Player(simple_opponents.Karmine()), Player(simple_opponents.Opportunist()), Player(simple_opponents.Pretender()), train]
 
   if type == "Simple":
-    return [karmine,  karmine, rl, train]
+    return [Player(simple_opponents.Karmine()),  Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), train]
 
   if type == "Difficult":
-    return [train_2, train_3, rl, train]
+    return [Player(gp_agent.ReinforcementLearningAgent(2)), Player(gp_agent.ReinforcementLearningAgent(3)), Player(rl_agent.RLAgent()), train]
 
   if type == "Very_difficult":
-    return [pretender, pretender, rl, karmine, train]
+    return [Player(simple_opponents.Pretender()), Player(simple_opponents.Pretender()), Player(rl_agent.RLAgent()), Player(simple_opponents.Karmine()), train]
 
   if type == "Karma_aware":
-    return [karmine, karmine, rl, stealer, train]
+    return [Player(simple_opponents.Karmine()), Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), Player(simple_opponents.Stealer()), train]
 
   if type == "Opportunists":
-    return [opportunist,opportunist, rl, train]
+    return [Player(simple_opponents.Opportunist()),Player(simple_opponents.Opportunist()), Player(rl_agent.RLAgent()), train]
 
   if type == "3_Karmines":
-    return [karmine,  karmine, karmine, train]
+    return [Player(simple_opponents.Karmine()),  Player(simple_opponents.Karmine()), Player(simple_opponents.Karmine()), train]
 
 
 
@@ -149,7 +139,7 @@ for game_type in game_types:
 
   for train_id in range(ntrains):
     # Create agents
-    agents = select_agents(game_type)
+    agents = create_agents(game_type)
 
     # Atualiza o epsilon
     for a in agents:
