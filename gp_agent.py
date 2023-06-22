@@ -7,7 +7,7 @@ class ReinforcementLearningAgent:
     # Identificador do agente
     self.id = id
     # Chance percentual do agente tomar a ação descrita na política
-    self.epsilon = 0.5
+    self.epsilon = 1
     # Recompensa do agente
     self.score = 0
     # Quantidade total de dinheiro que o agente ganhou
@@ -27,7 +27,7 @@ class ReinforcementLearningAgent:
     self.his_karma = 0
     self.your_karma = 0
     # Learn Rate
-    self.lr = 0.2
+    self.lr = 0
     # Future Importance
     self.fi = 0.9
 
