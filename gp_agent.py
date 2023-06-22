@@ -30,6 +30,8 @@ class ReinforcementLearningAgent:
     self.lr = 0
     # Future Importance
     self.fi = 0.9
+    # Quantidade de decisões que o agente tomou
+    self.ndecisions = 0
 
     try:
       self.read_police()
@@ -63,7 +65,7 @@ class ReinforcementLearningAgent:
 
         self.actions[line.split()[0]][line.split()[1]][line.split()[2]][line.split()[3]][line.split()[4]]=float(line.split()[5])
       else:
-        self.old_score = int(line)
+        self.old_score = float(line)
     file.close()
 
   # Cria o arquivo da política completamente aleatório
@@ -136,9 +138,12 @@ class ReinforcementLearningAgent:
       score = 1
     else:
       score = 0
-    self.total_amount += reward
-    self.score += score
 
+    self.total_amount += reward
+    self.score *= self.ndecisions
+    self.score += score
+    self.ndecisions += 1
+    self.score /= self.ndecisions
 
     # Calcula o estado futuro
     if your_action == "split":
