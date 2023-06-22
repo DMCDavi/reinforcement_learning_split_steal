@@ -140,7 +140,7 @@ def play_round(game, agent1, agent2, remaining):
 
 ntrains = 500
 
-game_types = ["Allgame","Simple","Difficult", "Very_difficult", "Karma_aware", "Opportunists", "3_Karmines"]
+game_types = ["Allgame", "Simple", "Difficult", "Very_difficult", "Karma_aware", "Opportunists", "3_Karmines"]
 
 trains_data = []
 
@@ -194,7 +194,6 @@ for game_type in game_types:
 
   for a in agents:
      if "GP_agent" in a.name:
-        a.agent.replace_police()
         a.agent.save_police_backup(game_type)
         a.agent.reset_police()
 
