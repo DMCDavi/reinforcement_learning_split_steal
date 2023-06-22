@@ -132,6 +132,13 @@ def show_loading(train_id, ntrains, game_type):
   if train_id in [int(ntrains/4), int(ntrains/2), int(3*ntrains/4)]:
       print(f"{int(train_id/ntrains * 100)}% concluído para o treino de {game_type}")
 
+# Atualiza o epsilon e o learning rate de acordo ao número de treinos
+def update_agents_rates(agents, train_id, ntrains):
+  for a in agents:
+    if "GP_agent" in a.name:
+      a.agent.epsilon = 0.2 + 0.8 * (train_id / ntrains)
+      a.agent.lr = 1 - 0.8 * (train_id / ntrains)
+
 ntrains = 10
 
 game_types = ["Allgame", "Simple", "Difficult", "Very_difficult", "Karma_aware", "Opportunists", "3_Karmines"]
@@ -141,14 +148,10 @@ trains_data = []
 for game_type in game_types:
 
   for train_id in range(ntrains):
-    # Create agents
+
     agents = create_agents(game_type)
 
-    # Atualiza o epsilon
-    for a in agents:
-      if "GP_agent" in a.name:
-        a.agent.epsilon = 0.2 + 0.8 * (train_id / ntrains)
-        a.agent.lr = 1 - 0.8 * (train_id / ntrains)
+    update_agents_rates(agents, train_id, ntrains)
 
     nrematches = 10 # Could very
     nfullrounds = 50 # How many full cycles
@@ -175,9 +178,12 @@ for game_type in game_types:
     scores = []
 
     for a in agents:
+      # Armazena os dados do vencedor da partida
       if a.total_amount > max_score:
         best = a
         max_score = a.total_amount
+      
+      # Salva os dados de cada agente da partida
       trains_data.append((train_id, a.name, a.total_amount, a.agent.score, game_type))
       
       if "GP_agent" in a.name:
