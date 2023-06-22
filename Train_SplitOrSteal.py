@@ -129,7 +129,12 @@ def play_round(game, agent1, agent2, remaining):
   game.prepare_round()   
   game.play_round(agent1, agent2, remaining)
 
-ntrains = 500
+# Imprime progresso do treino no console em 1/4, 2/4 e 3/4 de conclusão
+def show_loading(train_id, ntrains, game_type):
+  if train_id in [int(ntrains/4), int(ntrains/2), int(3*ntrains/4)]:
+      print(f"{int(train_id/ntrains * 100)}% concluído para o treino de {game_type}")
+
+ntrains = 10
 
 game_types = ["Allgame", "Simple", "Difficult", "Very_difficult", "Karma_aware", "Opportunists", "3_Karmines"]
 
@@ -180,9 +185,7 @@ for game_type in game_types:
       if "GP_agent" in a.name:
         a.agent.replace_police()
 
-    # Imprime progresso no console em 1/4, 2/4 e 3/4 de conclusão
-    if train_id in [int(ntrains/4), int(ntrains/2), int(3*ntrains/4)]:
-        print(f"{int(train_id/ntrains * 100)}% concluído para o treino de {game_type}")
+    show_loading(train_id, ntrains, game_type)
 
   for a in agents:
      if "GP_agent" in a.name:
