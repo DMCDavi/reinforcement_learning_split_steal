@@ -138,7 +138,22 @@ def play_round(game, agent1, agent2, remaining):
   game.prepare_round()   
   game.play_round(agent1, agent2, remaining)
 
-ntrains = 500
+def adicionar_count(nome_agente, dataframe):
+
+  # Verifica se o agente existe no dataframe
+  if nome_agente in dataframe['Agente'].values:
+      # Localiza o índice do agente no dataframe
+      indice = dataframe.index[dataframe['Agente'] == nome_agente][0]
+      # Adiciona 1 ao contador do agente
+      dataframe.loc[indice, 'Count'] += 1
+
+def obter_nomes(objetos):
+    nomes = []
+    for objeto in objetos:
+        nomes.append(objeto.name)
+    return nomes
+
+ntrains = 10
 
 game_types = ["Allgame","Simple","Difficult","Very_difficult","Karma_aware","Opportunists","3_Karmines"]
 
@@ -146,9 +161,17 @@ trains_data = []
 
 for game_type in game_types:
 
+  count_agents = select_agents(game_type)
+  winners_df = pd.DataFrame({'Agente': obter_nomes(count_agents),
+                  'Count': [0] * len(count_agents)})
+
   for train_id in range(ntrains):
     # Create agents
     agents = select_agents(game_type)
+
+    for a in agents:
+      if "GP_agent" in a.name:
+        a.agent.epsilon = 0.2 + 0.8 * (train_id / ntrains)
 
     nrematches = 10 # Could very
     nfullrounds = 50 # How many full cycles
@@ -173,14 +196,15 @@ for game_type in game_types:
     max_score = -1
     best = None
     scores = []
+
     for a in agents:
       if a.total_amount > max_score:
         best = a
         max_score = a.total_amount
+        adicionar_count(a.name, winners_df)
       trains_data.append((train_id, a.name, a.total_amount, a.agent.score, game_type))
       
       if "GP_agent" in a.name:
-        a.agent.epsilon = 0.2 + 0.8 * (train_id / ntrains)
         if a.agent.score >= a.agent.old_score:
           a.agent.replace_police()
   
@@ -194,6 +218,8 @@ for game_type in game_types:
         a.agent.reset_police()
 
   os.system("cls" if os.name == "nt" else "clear")  # Limpa o console
+
+  winners_df.to_csv(f"winners_{game_type}.txt", sep=" ", index=False)
 
 df = pd.DataFrame(trains_data, columns=["i", "name", "total_amount", "reward", "type"])
 df.to_csv("score.txt", sep=" ", index=False)

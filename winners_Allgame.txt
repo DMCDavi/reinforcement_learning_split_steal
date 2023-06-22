@@ -1,0 +1,8 @@
+Agente Count
+Splitter 1
+Stealer 10
+Randy 3
+Karmine 1
+Opportunist 3
+Pretender 3
+GP_agent_1 3

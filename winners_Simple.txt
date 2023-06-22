@@ -1,0 +1,5 @@
+Agente Count
+Karmine 10
+Karmine 0
+SimpleRL 2
+GP_agent_1 0

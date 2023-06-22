@@ -1,0 +1,6 @@
+Agente Count
+Pretender 10
+Pretender 0
+SimpleRL 3
+Karmine 3
+GP_agent_1 4
