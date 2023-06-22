@@ -3,7 +3,7 @@ import shutil
 import numpy as np
 
 class ReinforcementLearningAgent:
-  def __init__(self, id):
+  def __init__(self, id=1):
     # Identificador do agente
     self.id = id
     # Chance percentual do agente tomar a ação descrita na política

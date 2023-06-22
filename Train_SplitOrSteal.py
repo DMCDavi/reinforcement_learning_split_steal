@@ -13,31 +13,29 @@ from collections import defaultdict
 mean = 100
 variance = 10000  # Large variance
 
-def create_agents(type):
-  train = Player(gp_agent.ReinforcementLearningAgent(1))
+def create_agents(game_type):
+  train = Player(gp_agent.ReinforcementLearningAgent())
 
-  if type == "Allgame":
+  if game_type == "Allgame":
     return [Player(simple_opponents.Splitter()), Player(simple_opponents.Stealer()), Player(simple_opponents.Randy()), Player(simple_opponents.Karmine()), Player(simple_opponents.Opportunist()), Player(simple_opponents.Pretender()), train]
 
-  if type == "Simple":
+  if game_type == "Simple":
     return [Player(simple_opponents.Karmine()),  Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), train]
 
-  if type == "Difficult":
+  if game_type == "Difficult":
     return [Player(gp_agent.ReinforcementLearningAgent(2)), Player(gp_agent.ReinforcementLearningAgent(3)), Player(rl_agent.RLAgent()), train]
 
-  if type == "Very_difficult":
+  if game_type == "Very_difficult":
     return [Player(simple_opponents.Pretender()), Player(simple_opponents.Pretender()), Player(rl_agent.RLAgent()), Player(simple_opponents.Karmine()), train]
 
-  if type == "Karma_aware":
+  if game_type == "Karma_aware":
     return [Player(simple_opponents.Karmine()), Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), Player(simple_opponents.Stealer()), train]
 
-  if type == "Opportunists":
+  if game_type == "Opportunists":
     return [Player(simple_opponents.Opportunist()),Player(simple_opponents.Opportunist()), Player(rl_agent.RLAgent()), train]
 
-  if type == "3_Karmines":
+  if game_type == "3_Karmines":
     return [Player(simple_opponents.Karmine()),  Player(simple_opponents.Karmine()), Player(simple_opponents.Karmine()), train]
-
-
 
 class Game:
     def __init__ (self, total_rounds):
