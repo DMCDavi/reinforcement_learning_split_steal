@@ -148,7 +148,7 @@ def save_score_file(score_data):
   df = pd.DataFrame(score_data, columns=["i", "name", "total_amount", "reward", "type"])
   df.to_csv("score.txt", sep=" ", index=False)
 
-ntrains = 10
+ntrains = 500
 
 game_types = ["Allgame", "Simple", "Difficult", "Very_difficult", "Karma_aware", "Opportunists", "3_Karmines"]
 
