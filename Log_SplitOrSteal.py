@@ -12,39 +12,29 @@ variance = 10000  # Large variance
 #Create Log file
 log = open("Log.txt","w")
 
-def select_agents(type):
+def create_agents(game_type):
+  train = Player(gp_agent.ReinforcementLearningAgent())
 
-  splitter = Player(simple_opponents.Splitter())
-  stealer = Player(simple_opponents.Stealer())
-  randy = Player(simple_opponents.Randy())
-  karmine = Player(simple_opponents.Karmine())
-  opportunist = Player(simple_opponents.Opportunist())
-  pretender = Player(simple_opponents.Pretender())
-  train = Player(gp_agent.ReinforcementLearningAgent(1))
-  train_2 = Player(gp_agent.ReinforcementLearningAgent(2))
-  train_3 = Player(gp_agent.ReinforcementLearningAgent(3))
-  rl=Player(rl_agent.RLAgent())
+  if game_type == "Allgame":
+    return [Player(simple_opponents.Splitter()), Player(simple_opponents.Stealer()), Player(simple_opponents.Randy()), Player(simple_opponents.Karmine()), Player(simple_opponents.Opportunist()), Player(simple_opponents.Pretender()), train]
 
-  if type == "Allgame":
-    return [splitter, stealer, randy, karmine, opportunist, pretender, train]
+  if game_type == "Simple":
+    return [Player(simple_opponents.Karmine()),  Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), train]
 
-  if type == "Simple":
-    return [karmine,  karmine, rl, train]
+  if game_type == "Difficult":
+    return [Player(gp_agent.ReinforcementLearningAgent(2)), Player(gp_agent.ReinforcementLearningAgent(3)), Player(rl_agent.RLAgent()), train]
 
-  if type == "Difficult":
-    return [train_2, train_3, rl, train]
+  if game_type == "Very_difficult":
+    return [Player(simple_opponents.Pretender()), Player(simple_opponents.Pretender()), Player(rl_agent.RLAgent()), Player(simple_opponents.Karmine()), train]
 
-  if type == "Very difficult":
-    return [pretender, pretender, rl, karmine, train]
+  if game_type == "Karma_aware":
+    return [Player(simple_opponents.Karmine()), Player(simple_opponents.Karmine()), Player(rl_agent.RLAgent()), Player(simple_opponents.Stealer()), train]
 
-  if type == "Karma-aware":
-    return [karmine, karmine, rl, stealer, train]
+  if game_type == "Opportunists":
+    return [Player(simple_opponents.Opportunist()),Player(simple_opponents.Opportunist()), Player(rl_agent.RLAgent()), train]
 
-  if type == "Opportunists":
-    return [opportunist,opportunist, rl, train]
-
-  if type == "3 Karmines":
-    return [karmine,  karmine, karmine, train]
+  if game_type == "3_Karmines":
+    return [Player(simple_opponents.Karmine()),  Player(simple_opponents.Karmine()), Player(simple_opponents.Karmine()), train]
 
 class Game:
     def __init__ (self, total_rounds):
@@ -156,10 +146,10 @@ for i in range(ntrains):
   log.close()
   log = open("Log.txt","w")
 
-  agents = select_agents("Very difficult")
+  agents = create_agents("Very_difficult")
 
-  nrematches = 2 # Could very
-  nfullrounds = 1 # How many full cycles
+  nrematches = 10 # Could very
+  nfullrounds = 50 # How many full cycles
   total_rounds = int(len(agents)*(len(agents) - 1) * nfullrounds * nrematches / 2)
   game = Game(total_rounds)
 
