@@ -172,7 +172,7 @@ class ReinforcementLearningAgent:
     elif reward>0:
       score = 1
     elif your_action == "split":
-      score = 1
+      score = -1
     else:
       score = 0
 
